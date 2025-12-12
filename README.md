@@ -1,5 +1,5 @@
 # AI Portal Team Project
-팀 구성 (Team Members)
+팀 구성 (Team Members) <br>
 역할	이름
 팀장	박민성
 팀원	김재웅
