@@ -24,4 +24,9 @@
   이번 팀프로젝트는 AI 기반 포털사이트를 벤치 마킹하여<br>
   HTML/CSS/JS로 구형하여 팀 협업으로 작업을 진행
 </P>
-
+<h2>사용 언어</h2>
+<ol>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ol>
