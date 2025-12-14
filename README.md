@@ -29,7 +29,7 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
-</ol
+</ol>
 <h2>참고 문헌</h2>
 <ol>
   <li>W3School</li>
