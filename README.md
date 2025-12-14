@@ -1,4 +1,4 @@
-# AI Portal Team Project
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/e60ea552-d9ce-4fe2-bd28-b4abaf0ea859" /># AI Portal Team Project
 <h2>😀팀 구성 (Team Members)</h2> <br>
 역할	이름 <br>
 팀장	박민성🌟 <br>
@@ -29,4 +29,8 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
+</ol
+<h2> 참고 문헌 </h2>
+<ol>
+  <li>W3School</li>
 </ol>
