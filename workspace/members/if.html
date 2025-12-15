@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>project_site</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/project_style.css">
+</head>
+<body>
+    <div id="site">
+        <header>
+            <!-- 메뉴 버튼 -->
+             <button type="button" id="menu">
+                <span>menu</span>
+             </button>
+            
+            <!-- 이미지 누르면 홈으로 backgroung-image 사용 -->
+             <a href="#home"><span>image</span></a>
+        </header>
+        
+        <aside id="sidebar">
+            <nav aria-label="사이드">
+                <!-- 메뉴 버튼을 누르면 사이드바가 튀어나옴 -->
+                <ul>
+                    <li><a href="#"><span>새 채팅</span></a></li>
+                    <li><a href="#"><span>라이브러리</span></a></li>
+                    <li><a href="#"><span>내 채팅</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="contents">
+            <!-- 무엇을 도와드릴까요?-->
+            <div>
+                <p>무엇을 도와드릴까요?</p>
+            </div>
+
+            <form id="prompt" action="/server/program" method="post" enctype="multipart/form-data">
+                <!-- 첨부파일 버튼 -->
+                <div id="image">
+                    <input type="file" id="upload" name="upload">
+                    <span>업로드 이미지</span>
+                </div>    
+                
+                <!-- 입력창 -->
+                <input type="text" id="question" name="question" autocomplete="off" placeholder="무엇이든 물어보세요">
+
+                <!-- 전송 -->
+                 <button type="submit" id="submit"><span>전송</span></button>
+            </form>
+        </main>
+        
+    </div> <!-- /#site-->
+</body>
+</html>
