@@ -1,0 +1,305 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:  black;
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: gray;
+    margin-bottom: 40px;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-item > a {
+    font-weight: 500;
+}
+
+.btn-start {
+    padding: 8px 16px;
+    border: none;
+    display: block;
+    background-color: rgb(8, 42, 235);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+main section:first-child {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-badge {
+    font-size: 14px;
+    color: darkgray;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: darkgray;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*  AI Tools Section*/
+.tools-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.tool-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.tool-card {
+    padding: 24px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.tool-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    transition: transform 0.3 ease;
+}
+
+.tool-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tool-text {
+    font-size: 14px;
+    color: darkgray;
+}
+
+/* Why AI Portal Section */
+.why-section {
+    background-color: darkgray;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.feature-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 32px 24px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.feature-icon {
+    font-size: 28px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.feature-text {
+    font-size: 14px;
+    color: darkgray;
+}
+
+/* Footer*/
+.footer {
+    background-color: black;
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: darkgray;
+}
+
+.footer-links > h5 {
+    margin-bottom: 12px;
+}
+
+.footer-links > li {
+    font-size: 14px;
+    color: darkgray;
+    margin-bottom: 6px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: darkgray;
+}
+
+/* Effect */
+.tool-card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tool-card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.tool-card > .tool-icon{
+    transition: transform 0.3s ease;
+}
+.tool-card:hover > .tool-icon{
+    transform: scale(1.2);
+}
+.feature-card{
+    border: 2px solid transparent;
+    transition: border-color 0.25s ease;
+}
+.feature-card:hover{
+    cursor: pointer;
+    border-color: blue;
+}
+/* 토글 버튼 */
+.theme-toggle {
+    width: 48px;
+    height: 26px;
+    background-color: #e5e7eb;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+
+    transition: background-color 0.3s ease;
+}
+
+/* 동그라미 */
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    transition: transform 0.3s ease;
+}
+
+/* ON 상태 */
+.theme-toggle > .active {
+    background-color: #2563eb;
+}
+
+.theme-toggle.active > .toggle-circle {
+    transform: translateX(22px);
+}
+.tool-link {
+    display: block;
+}
