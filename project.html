@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>project_site</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="project_style.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/project_style.css">
+    <script src="../eo-backand-team/JavaScript/project_java.js"></script>
 </head>
 <body>
     <div id="site">
@@ -20,22 +21,28 @@
         
         <aside id="sidebar">
             <nav aria-label="사이드">
+                <h2>JDJS</h2>
+
                 <!-- 메뉴 버튼을 누르면 사이드바가 튀어나옴 -->
                 <ul>
-                    <li><a href="#"><span>새 채팅</span></a></li>
-                    <li><a href="#"><span>라이브러리</span></a></li>
-                    <li><a href="#"><span>내 채팅</span></a></li>
+                    <li><a href="#newChat" id="newChat">새 채팅</a></li>
+                    <li><a href="#library">라이브러리</a></li>
+                    <li><p>내 채팅</p></li>
                 </ul>
+
+                <!-- 저장된 채팅방 목록을 출력 -->
+                 <ul id="chatList"></ul>
             </nav>
 
             <button type="button" id="close"><span>close</span></button>
         </aside>
 
         <main id="contents">
+            <!-- 채팅영역 -->
+            <div id="chat"></div>
+
             <!-- 무엇을 도와드릴까요?-->
-            <div>
-                <p>무엇을 도와드릴까요?</p>
-            </div>
+            <h2>무엇을 도와드릴까요?</h2>
 
             <form id="prompt" action="/server/program" method="post" enctype="multipart/form-data">
                 <!-- 첨부파일 버튼 -->
