@@ -1,0 +1,92 @@
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+    }
+
+    .site-title {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 100px;
+    }
+
+    .login-box {
+      background-color: rgba(238, 233, 233, 0.4);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin: 30px 100px;
+      width: 300px;
+      text-align: center;
+    }
+    
+    .login-box > input {
+      width: 92.5%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-box > button {
+      width: 100%;
+      padding: 10px;
+      background-color: pink;
+      color: white;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .login-box > h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+
+    .login-box > button:hover {
+      background-color: #e91e63;
+    }
+
+    .login-box > a {
+        margin: 0 23px;
+        text-decoration: none;
+        color: #007BFF;
+        font-size: 14px;
+    }
+
+    .login-links > a:hover {
+        text-decoration: underline;
+    }
+
+    .banner-section {
+      margin-top: 05px;
+      text-align: center;
+    }
+
+    .banner-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+
+
+
+
+        
+        

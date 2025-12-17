@@ -29,6 +29,11 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    transition-duration: 200ms;
+}
+
+#site > header > button:hover {
+    transform: scale(1.2);
 }
 
 #site > header > a {
@@ -82,11 +87,14 @@ html, body {
     text-decoration: none;
     padding: 10px;
     margin-bottom: 12px;
+
+    border-left: 3px solid transparent;
 }
 
 #sidebar > nav > ul > li > a:hover {
-    background-color: #f2f2f8;
-    color: black;
+    background-color: #e0f2fe;
+    color: #111;
+    border-left-color: #93c5fd;
 }
 
 #sidebar > nav > ul > li > p {
@@ -107,6 +115,11 @@ html, body {
     background-image: url("https://i.imgur.com/BRdH9in.png");
     background-repeat: no-repeat;
     background-size: cover;
+    transition-duration: 200ms;
+}
+
+#close:hover {
+    transform: rotate(90deg);
 }
 
 /* contents */
@@ -176,6 +189,7 @@ html, body {
     border-radius: 10px;
     z-index: 5;
     background-color: #eee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 #question {
@@ -195,8 +209,13 @@ html, body {
     background-image: url("../images/Upload_image.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     cursor: pointer;
+    transition-duration: 200ms;
+}
+
+#image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 #upload {
@@ -206,16 +225,22 @@ html, body {
 #submit {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 
     padding: 0;
     border: 0;
     background-color: transparent;
 
-    background-image: url("../images/Upload_image.png");
+    background-image: url("../images/enter_button.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
     cursor: pointer;
+    transition-duration: 200ms;
+}
+
+#submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 #site > header > button > span,
