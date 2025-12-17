@@ -12,30 +12,28 @@ window.addEventListener('load', function () {
     // chat
     const form = document.getElementById('prompt');
     const chat = document.getElementById('chat');
+    const contents = this.document.getElementById('contents');
     const title = document.querySelector('#contents > h2');
 
-    /* =========================
-        sidebar
-        ========================= */
+    // sidebar
     menuButton.addEventListener('click', function () {
         sidebar.classList.add('on');
+        menuButton.style.visibility = 'hidden';
     });
 
     closeButton.addEventListener('click', function () {
         sidebar.classList.remove('on');
+        menuButton.style.visibility = 'visible';
     });
 
-    /* =========================
-        upload
-        ========================= */
+    // upload
+
     imageButton.addEventListener('click', function () {
         upload.click();
     });
 
     
-    /* =========================
-        masage
-        ========================= */
+    // masage
     function addMsg(text, who) {
         const div = document.createElement('div');
         
@@ -44,6 +42,7 @@ window.addEventListener('load', function () {
         chat.appendChild(div);
     }
 
+    // chat
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         const text = input.value.trim();
@@ -56,11 +55,14 @@ window.addEventListener('load', function () {
         
         chat.style.display = "block";
         title.style.display = "none";
+
+        contents.classList.add('on');
+
+        chat.scrollTop = chat.scrollHeight;
     });
 
-    /* =========================
-        newChat
-        ========================= */
+    // newChat
+
     newChat.addEventListener('click', function (event) {
         event.preventDefault();
         chat.innerHTML = '';
@@ -71,5 +73,7 @@ window.addEventListener('load', function () {
         
         title.style.display = "block";
         input.focus();
+
+        contents.classList.remove('on');
     });
 });
