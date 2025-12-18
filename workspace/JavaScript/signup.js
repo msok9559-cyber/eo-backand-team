@@ -17,7 +17,7 @@ const allClick = document.getElementById("allclick");
 const termItmes = document.querySelectorAll(".trem-item");
 
 
-
+// 아이디 중복 확인
 idCheckBtn.addEventListener("click", function () {
     const inputId = userId.value;
 
@@ -39,7 +39,7 @@ idCheckBtn.addEventListener("click", function () {
 
 //비밀번호 입력 확인
 pwCheck.addEventListener("keyup", function () {
-    // 둘 중 하나라도 비어 있으면 메시지 숨김
+
     if (pw.value === "" || pwCheck.value === "") {
         msg.style.display = "none";
         return;
