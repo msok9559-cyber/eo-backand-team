@@ -53,8 +53,8 @@ window.addEventListener('load', function () {
         addMsg('고정된 답변입니다', 'bot');
         input.value = '';
         
-        chat.style.display = "block";
-        title.style.display = "none";
+        chat.style.display = 'block';
+        title.style.display = 'none';
 
         contents.classList.add('on');
 
@@ -71,7 +71,7 @@ window.addEventListener('load', function () {
         input.value = '';
         upload.value = '';
         
-        title.style.display = "block";
+        title.style.display = 'block';
         input.focus();
 
         contents.classList.remove('on');
