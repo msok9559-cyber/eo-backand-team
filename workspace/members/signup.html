@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/signup.css">
+    
 </head>
 <body>
     <header class="header">
@@ -15,9 +18,6 @@
         <div class="header-right">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#">AI 도구</a></li>
-                    <li class="nav-item"><a href="#">기능</a></li>
-                    <li class="nav-item"><a href="#">소개</a></li>
                     <li class="nav-item"><a href="#">MOD</a></li>
                 </ul>
             </nav>
@@ -30,20 +30,20 @@
             </div>
         </div>
     </header>
-    <main class="auth-container">
-        <section class="auth-form">
-            <h2 class="auth-title">회원가입</h2>
-            <p class="auth-desc">JDJS에 오신 것을 환영합니다</p>
+    <main id="auth-container">
+        <section id="auth-form">
+            <h2 id="auth-title">회원가입</h2>
+            <p id="auth-desc">JDJS에 오신 것을 환영합니다</p>
 
-            <form action="auth-form">
+            <form id="auth-form">
                 <label>
                     이름
-                    <input type="text" placeholder="이름을 입력하세요" required>
+                    <input type="text" class="form-input" placeholder="이름을 입력하세요" required>
                 </label>
 
-                <div class="form-group">
-                    <span class="label">가입 유형</span>
-                    <div class="radio-group">
+                <div id="form-group">
+                    <span id="label">가입 유형</span>
+                    <div id="radio-group">
                         <label>
                             <input type="radio" name="nation" checked>
                             내국인
@@ -58,62 +58,66 @@
                 <label>
                     주민등록번호
                     <div class="inline-input">
-                        <input type="text" placeholder="앞 6자리" maxlength="6" required>
+                        <input type="text" class="form-input" placeholder="앞 6자리" maxlength="6" required>
                         <span>-</span>
-                        <input type="text" placeholder="뒤 7자리" maxlength="7" required>
+                        <input type="text" class="form-input" placeholder="뒤 7자리" maxlength="7" required>
                     </div>
                 </label>
                 <!-- 아이디 / 중복 확인 -->
                 <label>
                     아이디
                     <div class="inline-input">
-                        <input type="text" placeholder="아이디 입력" required>
-                        <button type="button" class="btn-check">중복확인</button>
+                        <input type="text"  id="userId" class="form-input" placeholder="아이디 입력" required autocomplete="off">
+                        <button type="button" id="idCheckBtn" class="btn-check">중복확인</button>
                     </div>
                 </label>
+                <p id="idMessage">사용가능한 아이디입니다!</p>
                 <!-- 비밀번호 -->
                 <label>
                     비밀번호
-                    <input type="text" placeholder="비밀번호 입력" required>
+                    <input type="password" id="password" class="form-input" placeholder="비밀번호 입력" required>
                 </label>
 
                 <!-- 비밀번호 중복체크 -->
                 <label>
                     비밀번호 확인
-                    <input type="text" placeholder="비밀번호 입력" required >
+                    <input type="password" id="passwordCheck" class="form-input" placeholder="비밀번호 입력" required >
                 </label>
+                <p id="pwMessage">비밀번호가 일치합니다.</p>
                 <!-- 휴대폰 번호 및 인증 -->
                 <label>
                     휴대폰 번호
                     <div class="inline-input">
-                        <input type="tel" placeholder="010-0000-0000" required>
+                        <input type="tel" class="form-input" placeholder="010-0000-0000" required>
                         <button type="button" class="btn-auth">인증번호 받기</button>
                     </div>
                 </label>
                 <!-- 인증번호 입력 -->
                 <label>
                     인증번호
-                    <input type="text" placeholder="인증번호를 입력해주세요">
+                    <div class="inline-input">
+                    <input type="text" class="form-input" placeholder="인증번호를 입력해주세요" required>
                     <button type="submit" class="btn-auth">확인</button>
+                    </div>
                 </label>
-                <div class="terms">
+                <div id="terms">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" id="allclick">
                         전체 약관에 동의합니다
                     </label>
 
                     <label>
-                        <input type="checkbox" required>
+                        <input type="checkbox" class="trem-item" required>
                         (필수) 이용약관 동의
                     </label>
 
                     <label>
-                        <input type="checkbox" required>
+                        <input type="checkbox" class="trem-item" required>
                         (필수) 개인정보 수집 및 이용 동의
                     </label>
 
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" class="trem-item"> 
                         (선택) 마케팅 정보 수신 동의
                     </label>
                 </div>
@@ -124,11 +128,12 @@
         </section>
     </main>
     <footer>
-        <p class="auth-footer">
+        <p id="auth-footer">
             이미 계정이 있으신가요?
             <a href="../members/login.html">로그인</a>
         </p>
     </footer>
-
+    <script src="../JavaScript/darkmod.js"></script>
+    <script src="../JavaScript/signup.js"></script>
 </body>
 </html>
