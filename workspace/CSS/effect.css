@@ -1,0 +1,29 @@
+/*
+   Tool Card Hover Effect*/
+
+/* 기본 상태 */
+#tool-list > article {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* hover  */
+#tool-list > article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+/* Why Section Border Effect */
+
+/* 기본 상태 */
+#feature-list > article {
+    border: 1px solid #d1d5db;
+    transition: border-color 0.25s ease;
+}
+
+/* hover */
+#feature-list > article:hover {
+    border-color: #2563eb;
+    transform: translateY(-4px);
+    cursor: pointer;
+}

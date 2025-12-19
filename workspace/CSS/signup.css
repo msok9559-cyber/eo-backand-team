@@ -1,0 +1,212 @@
+/* 배경 */
+#auth-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f3f4f6;
+}
+
+/* 박스 */
+.auth-box {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 48px 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 제목 */
+.auth-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.auth-desc {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 36px;
+}
+
+/* form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* 한 줄 구조 */
+.form-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: center;
+    gap: 14px;
+}
+
+/* input */
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+
+/* 메시지 공통 */
+.form-message {
+    font-size: 13px;
+    display: none;
+    padding-left: 150px;
+    display: none;
+}
+
+/* 주민번호 */
+.inline-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.inline-input > input {
+    flex: 1;
+    min-width: 0;   /* 절대 삐져나가지 않음 */
+}
+
+.inline-input > span {
+    flex: 0 0 auto;
+}
+
+/* 버튼 */
+.btn-check,
+.btn-auth {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #2563eb;
+    background: #fff;
+    color: #2563eb;
+    white-space: nowrap;
+}
+
+.btn-check:hover,
+.btn-auth:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* 메시지 */
+.form-message {
+    font-size: 13px;
+    display: none;
+}
+
+/* 약관 */
+#terms {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 회원가입 버튼 */
+.btn-start {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+}
+
+/* footer */
+#auth-footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+    color: gray;
+}
+
+#auth-footer a {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background-color: #18181b;
+    color: #e4e4e7;
+}
+
+/* 회원가입 전체 배경 */
+body.dark #auth-container {
+    background-color: #18181b;
+}
+
+/* 회원가입 박스 */
+body.dark .auth-box {
+    background-color: #1f1f23;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* 제목 / 설명 */
+body.dark .auth-title {
+    color: #fafafa;
+}
+
+body.dark .auth-desc {
+    color: #a1a1aa;
+}
+
+/* 입력창 */
+body.dark .form-input {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    color: #e4e4e7;
+}
+
+body.dark .form-input::placeholder {
+    color: #a1a1aa;
+}
+
+body.dark .form-input:focus {
+    border-color: #3b82f6;
+}
+
+/* 버튼 */
+body.dark .btn-check,
+body.dark .btn-auth,
+body.dark .btn-start {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    color: #e4e4e7;
+}
+
+body.dark .btn-check:hover,
+body.dark .btn-auth:hover,
+body.dark .btn-start:hover {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+}
+
+/* 약관 */
+body.dark #terms {
+    border-top: 1px solid #3f3f46;
+}
+
+/* 메시지 */
+body.dark .form-message {
+    color: #a1a1aa;
+}
+
+/* 푸터 */
+body.dark #auth-footer {
+    color: #a1a1aa;
+}
