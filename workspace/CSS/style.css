@@ -159,7 +159,27 @@
     border: 1px solid #d1d5db;
     border-radius: 12px;
     padding: 24px;
+
+    position: relative;
+    padding-top: 52px;
 }
+#tool-list > article::before {
+    content: "🔍";              
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 24px;
+    opacity: 0.9;
+    pointer-events: none;
+}
+#tool-list > article:nth-child(1)::before { content: "🔍"; }
+#tool-list > article:nth-child(2)::before { content: "🎨"; }
+#tool-list > article:nth-child(3)::before { content: "📄"; }
+#tool-list > article:nth-child(4)::before { content: "🎤"; }
+#tool-list > article:nth-child(5)::before { content: "🎬"; }
+#tool-list > article:nth-child(6)::before { content: "🌍"; }
+#tool-list > article:nth-child(7)::before { content: "💻"; }
+#tool-list > article:nth-child(8)::before { content: "⚙️"; }
 
 #tool-list > article > h4 {
     font-size: 18px;
@@ -202,7 +222,22 @@
     border-radius: 12px;
     padding: 32px 24px;
     text-align: left;
+
+    position: relative;
+    padding-top: 64px;
+    transition: border-color 0.2s, transform 0.2s;
 }
+#feature-list > article::before {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-size: 28px;
+    opacity: 0.9;
+    pointer-events: none;
+}
+#feature-list > article:nth-child(1)::before {content: "🎯";}
+#feature-list > article:nth-child(2)::before {content: "⚡";}
+#feature-list > article:nth-child(3)::before {content: "🌐";}
 
 #feature-list > article > h4 {
     font-size: 18px;
