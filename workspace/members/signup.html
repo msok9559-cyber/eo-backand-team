@@ -10,26 +10,28 @@
     
 </head>
 <body>
-    <header class="header">
-    <div class="header-inner">
-        <h1 class="logo">JDJS</h1>
+    <header id="header">
+        <div id="header-inner">
+            <a href="#home"id="logo">JDJS</a>
 
+        <nav id="nav">
+            <ul>
+                <li><a href="#">AI 도구</a></li>
+                <li><a href="#">기능</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">MOD</a></li>
+            </ul>
+        </nav>
         
-        <div class="header-right">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#">MOD</a></li>
-                </ul>
-            </nav>
-                <button class="theme-toggle" aria-label="다크모드 토글">
-                    <span class="toggle-text">OFF</span>
-                    <span class="toggle-circle"></span>
-                </button>
+        <button>
+            <span>OFF</span>
+            <span></span>
+        </button>
 
-                <a href="../workspace/members/login.html" class="btn-start">Log In</a>
-            </div>
+            <a href="login.html" id="login-btn">Log In</a>
         </div>
     </header>
+
     <main id="auth-container">
         <section id="auth-form">
             <h2 id="auth-title">회원가입</h2>
