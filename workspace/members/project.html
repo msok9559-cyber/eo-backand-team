@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-site</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/project-style.css">
+    <script src="../JavaScript/project-java.js"></script>
+</head>
+<body>
+    <div id="site">
+        <header>
+            <!-- 메뉴 버튼 -->
+            <button type="button" id="menu">
+                <span>menu</span>
+            </button>
+        </header>
+        
+        <aside id="sidebar">
+            <nav aria-label="사이드">
+                <h1><a href="#home">JDJS</a></h1>
+
+                <!-- 메뉴 버튼을 누르면 사이드바가 튀어나옴 -->
+                <ul>
+                    <li><a href="#newChat" id="newChat">새 채팅</a></li>
+                    <li><a href="#library">라이브러리</a></li>
+                    <li><p>내 채팅</p></li>
+                </ul>
+
+                <!-- 저장된 채팅방 목록을 출력 -->
+                 <ul id="chatList"></ul>
+            </nav>
+
+            <button type="button" id="close"><span>close</span></button>
+
+            <a href="#회원정보"><span>회원정보 수정</span></a>
+            <a href="#logout"><span>로그아웃</span></a>
+        </aside>
+
+        <main id="contents">
+            <!-- 채팅창 -->
+            <section>
+                <!-- 무엇을 도와드릴까요?-->
+                <h2>무엇을 도와드릴까요?</h2>
+
+                <!-- 채팅영역 -->
+                <div id="chat"><span>프롬프트 창</span></div>
+            </section>
+                
+            <!-- 입력 -->
+            <section>
+                <form id="prompt" action="/server/program" method="post">
+                    <!-- 첨부파일 버튼 -->
+                    <div id="image">
+                        <input type="file" id="upload" name="upload">
+                        <span>업로드 이미지</span>
+                    </div>    
+                    
+                    <!-- 입력창 -->
+                    <input type="text" id="question" name="question" autocomplete="off" placeholder="무엇이든 물어보세요">
+    
+                    <!-- 전송 -->
+                     <button type="submit" id="submit"><span>전송</span></button>
+                </form>
+            </section>
+        </main>
+        
+    </div> <!-- /#site-->
+</body>
+</html>
