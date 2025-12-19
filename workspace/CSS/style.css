@@ -1,220 +1,210 @@
-/* Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color:  black;
-    line-height: 1.6;
-    background-color: white;
-}
-
-/* Common */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-.section-title {
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.section-description {
-    color: gray;
-    margin-bottom: 40px;
-}
-
 /* Header */
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
+#header {
+    border-bottom: 1px solid #ddd;
 }
 
-.header-inner {
-    max-width: 1200px;
+#header-inner {
+    width: 1200px;
     margin: 0 auto;
     padding: 16px 20px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.header-right{
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
-.logo {
+#logo {
     font-size: 24px;
     font-weight: bold;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
 }
 
-.nav-list {
+
+#nav > ul {
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
-.nav-item > a {
+#nav > ul > li > a {
+    text-decoration: none;
+    font-size: 15px;
     font-weight: 500;
+    color: black;
 }
 
-.btn-start {
+#login-btn {
     padding: 8px 16px;
-    border: none;
-    display: block;
-    background-color: rgb(8, 42, 235);
+    background-color: #2563eb;
     color: white;
-    cursor: pointer;
+    text-decoration: none;
     border-radius: 4px;
+    font-size: 14px;
+}
+/* toggle button */
+#header-inner > button {
+    width: 64px;
+    height: 28px;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+/* OFF / ON 텍스트 */
+#header-inner > button > span:first-child {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #374151;
+    pointer-events: none;
+    z-index: 2;
+}
+/* 동그라미 */
+#header-inner > button > span:last-child {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
 }
 
 /* Hero Section */
-main section:first-child {
-    text-align: center;
+
+#hero {
     padding: 100px 20px;
+    text-align: center;
 }
 
-.hero-badge {
+#hero > p:first-child {
     font-size: 14px;
-    color: darkgray;
+    color: #6b7280;
     margin-bottom: 12px;
 }
 
-.hero-title {
+#hero > h2 {
     font-size: 42px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
-.hero-title .highlight{color: darkblue;}
 
-.hero-description {
-    color: darkgray;
-    max-width: 600px;
-    margin: 0 auto;
+#hero > h2 > span {
+    color: #1d4ed8;
 }
 
-/*  AI Tools Section*/
-.tools-section {
+#hero > p:last-child {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Tools Section */
+
+#tools {
+    background-color: #f3f4f6;
     padding: 80px 20px;
-    background-color:#d3d3d4;
 }
-.tools-inner{
-    max-width: 1200px;
+
+#tools-inner {
+    width: 1200px;
     margin: 0 auto;
 }
-.tools-section  .section-title,
-.tools-section  .section-description{text-align: center;}
 
-.tool-list {
+#tools-inner > h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+ #tools-inner > p {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+#tool-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
-.tool-card {
-    padding: 24px;
-    border: 1px solid gray;
-    border-radius: 12px;
+#tool-list > article {
     background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 24px;
 }
 
-.tool-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.tool-icon {
-    width: 28px;
-    height: 28px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 24px;
-    transition: transform 0.3 ease;
-}
-
-.tool-title {
+#tool-list > article > h4 {
     font-size: 18px;
-    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.tool-text {
+#tool-list > article > p {
     font-size: 14px;
-    color: darkgray;
+    color: #6b7280;
 }
 
-/* Why AI Portal Section */
-.why-section {
+/* Why Section*/
+
+#why {
     padding: 100px 20px;
     text-align: center;
 }
 
-.feature-list {
-    max-width: 1200px;
+#why > h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+#why > p {
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+#feature-list {
+    width: 1200px;
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    
 }
 
-.feature-card {
-    border: 1px solid #9ca3af;
-    background-color: white;
-    padding: 32px 24px;
+#why > #feature-list > article {
+    border: 1px solid #d1d5db;
     border-radius: 12px;
+    padding: 32px 24px;
     text-align: left;
-    
 }
 
-.feature-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.feature-icon {
-    font-size: 28px;
-}
-
-.feature-title {
+#feature-list > article > h4 {
     font-size: 18px;
-    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.feature-text {
+#feature-list > article > p {
     font-size: 14px;
-    color: darkgray;
+    color: #6b7280;
 }
 
 /* Footer*/
-.footer {
-    background-color: black;
+
+#footer {
+    background-color: #000;
     color: white;
     padding: 60px 20px 20px;
 }
 
-.footer-inner {
-    max-width: 1200px;
+#footer-inner {
+    width: 1200px;
     margin: 0 auto;
 
     display: grid;
@@ -222,137 +212,21 @@ main section:first-child {
     gap: 24px;
 }
 
-.footer-logo {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.footer-description {
-    font-size: 14px;
-    color: darkgray;
-}
-
-.footer-links > h5 {
+#footer-inner > div > h4,
+#footer-inner > div > h5 {
     margin-bottom: 12px;
 }
 
-.footer-links > li {
+#footer-inner > div > p,
+#footer-inner > div > ul > li {
     font-size: 14px;
-    color: darkgray;
-    margin-bottom: 6px;
+    color: #9ca3af;
+    margin-bottom: 12px;
 }
 
-.footer-copy {
-    text-align: center;
+#copyright {
     margin-top: 40px;
+    text-align: center;
     font-size: 13px;
-    color: darkgray;
-}
-
-/* Effect */
-.tool-card{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.tool-card:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-.tool-card .tool-icon{
-    transition: transform 0.3s ease;
-}
-.tool-card:hover  .tool-icon{
-    transform: scale(1.2);
-}
-.feature-card{
-    transition: border-color 0.25s ease;
-}
-.feature-card:hover{
-    cursor: pointer;
-    border-color: blue;
-}
-/* 토글 버튼 */
-.theme-toggle {
-    width: 64px; 
-    height: 26px;
-    background-color: #e5e7eb;
-    border-radius: 999px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    padding: 0;
-
-    transition: background-color 0.3s ease;
-}
-
-/* 동그라미 */
-.toggle-circle {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-
-    position: absolute;
-    top: 3px;
-    left: 3px;
-
-    transition: transform 0.3s ease;
-}
-.theme-toggle.active {
-    background-color: #2563eb;
-}
-.toggle-text {
-    position: absolute;
-    left: 6px;
-    font-size: 12px;
-    top: 50%;                         /* ✅ 추가 */
-    transform: translateY(-50%);
-    font-weight: bold;
-    color: #374151;
-    z-index: 1; 
-    pointer-events: none;
-    transition: color 0.3s ease;
-}
-.theme-toggle.active .toggle-text {
-    left: 10px;
-    color: white;
-}
-
-/* ON 상태 */
-.theme-toggle .active {
-    background-color: #2563eb;
-}
-
-.theme-toggle.active > .toggle-circle {
-    transform: translateX(36px);
-}
-.tool-link {
-    display: block;
-}
-/* Dark Mode */
-body.dark {
-    background-color:#111827;
-    color:#e5e7eb;
-}
-
-body.dark .header {
-    background-color:#111827;
-    border-bottom:1px solid #374151;
-}
-
-
-body.dark .tool-card,
-body.dark .feature-card {
-    background-color:#1f2933;
-    border-color:#374151;
-}
-
-body.dark .footer {
-    background-color:#030712;
-}
-body.dark .tools-section {
-    background-color:#020617;
-}
-body.dark .hero-title .highlight {
-    color: #60a5fa; 
+    color: #9ca3af;
 }
