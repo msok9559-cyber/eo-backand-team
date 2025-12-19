@@ -6,6 +6,7 @@ const toggleText =
 
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('on');
+    toggleBtn.classList.toggle('active');
     document.body.classList.toggle('dark');
 
     toggleText.textContent =
