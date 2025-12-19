@@ -4,7 +4,7 @@ const idCheckBtn = document.getElementById("idCheckBtn");
 const idMessage = document.getElementById("idMessage");
 
 // 사용중인 아이디 임의 값
-const usedIds = ["admin", "test", "user123"];
+const usedIds = ["park", "kim", "jung"];
 
 
 //비밀번호 입력 확인 변수
