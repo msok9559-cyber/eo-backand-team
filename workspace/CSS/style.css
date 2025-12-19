@@ -230,3 +230,75 @@
     font-size: 13px;
     color: #9ca3af;
 }
+
+/* ===== Dark Mode ===== */
+
+body.dark #header {
+    background-color: #121212;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+body.dark #header > #header-inner > #logo {
+    color: #ffffff;
+}
+
+body.dark #header > #header-inner > #nav > ul > li > a {
+    color: #e0e0e0;
+}
+
+body.dark #header > #header-inner > #login-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Hero */
+body.dark #hero {
+    background-color: #121212;
+}
+
+body.dark #hero > h2 > span {
+    color: #ffffff;
+}
+
+body.dark #hero > p {
+    color: #b0b0b0;
+}
+
+/* Tools */
+body.dark #tools {
+    background-color: #121212;
+}
+
+body.dark #tools > #tools-inner > #tool-list > article {
+    background-color: #1e1e1e;
+    border: 1px solid #2a2a2a;
+}
+
+body.dark #tools > #tools-inner > #tool-list > article > p {
+    color: #b0b0b0;
+}
+
+/* Why */
+body.dark #why {
+    background-color: #121212;
+}
+
+body.dark #why > #feature-list > article {
+    background-color: #1e1e1e;
+    border: 1px solid #2a2a2a;
+}
+
+body.dark #why > #feature-list > article > p {
+    color: #b0b0b0;
+}
+
+/* Footer */
+body.dark #footer {
+    background-color: #0d0d0d;
+}
+
+body.dark #footer > #footer-inner > div > p,
+body.dark #footer > #footer-inner > div > ul > li,
+body.dark #copyright {
+    color: #b0b0b0;
+}
