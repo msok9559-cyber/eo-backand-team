@@ -53,19 +53,22 @@
     padding: 0;
     margin-left: 8px;
     margin-right: 8px;
+    transition: background-color 0.3s;
 }
+
 /* OFF / ON 텍스트 */
 #header-inner > button > span:first-child {
     position: absolute;
-    left: 8px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     color: #374151;
     pointer-events: none;
-    z-index: 2;
+    z-index: 3; 
 }
+
 /* 동그라미 */
 #header-inner > button > span:last-child {
     width: 20px;
@@ -75,6 +78,22 @@
     position: absolute;
     top: 4px;
     left: 4px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+/* ===== 다크모드 ON ===== */
+
+#header-inner > button.active {
+    background-color: #374151;
+}
+
+#header-inner > button.active > span:last-child {
+    transform: translateX(36px);
+}
+
+#header-inner > button.active > span:first-child {
+    color: #ffffff;
 }
 
 /* Hero Section */
@@ -231,29 +250,29 @@
     color: #9ca3af;
 }
 
-/* ===== Dark Mode ===== */
+/* ===== Dark Mode (Light Dark) ===== */
 
 body.dark #header {
-    background-color: #121212;
-    border-bottom: 1px solid #2a2a2a;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #3a3a3a;
 }
 
-body.dark #header > #header-inner > #logo {
+#logo {
     color: #ffffff;
 }
 
-body.dark #header > #header-inner > #nav > ul > li > a {
-    color: #e0e0e0;
+#nav > ul > li > a {
+    color: #f1f1f1;
 }
 
-body.dark #header > #header-inner > #login-btn {
-    background-color: #2a2a2a;
+#login-btn {
+    background-color: #3a3a3a;
     color: #ffffff;
 }
 
 /* Hero */
 body.dark #hero {
-    background-color: #121212;
+    background-color: #1f1f1f;
 }
 
 body.dark #hero > h2 > span {
@@ -261,44 +280,44 @@ body.dark #hero > h2 > span {
 }
 
 body.dark #hero > p {
-    color: #b0b0b0;
+    color: #c7c7c7;
 }
 
 /* Tools */
 body.dark #tools {
-    background-color: #121212;
+    background-color: #1f1f1f;
 }
 
 body.dark #tools > #tools-inner > #tool-list > article {
-    background-color: #1e1e1e;
-    border: 1px solid #2a2a2a;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
 }
 
 body.dark #tools > #tools-inner > #tool-list > article > p {
-    color: #b0b0b0;
+    color: #c7c7c7;
 }
 
 /* Why */
 body.dark #why {
-    background-color: #121212;
+    background-color: #1f1f1f;
 }
 
 body.dark #why > #feature-list > article {
-    background-color: #1e1e1e;
-    border: 1px solid #2a2a2a;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
 }
 
 body.dark #why > #feature-list > article > p {
-    color: #b0b0b0;
+    color: #c7c7c7;
 }
 
 /* Footer */
 body.dark #footer {
-    background-color: #0d0d0d;
+    background-color: #181818;
 }
 
 body.dark #footer > #footer-inner > div > p,
 body.dark #footer > #footer-inner > div > ul > li,
 body.dark #copyright {
-    color: #b0b0b0;
+    color: #c7c7c7;
 }
