@@ -13,48 +13,65 @@ window.addEventListener('load', function () {
     const recheckPassword = document.querySelector('#recheckPassword > input');
     const pwMsg = document.getElementById('pwMsg');
 
-    //고정 인증번호
+    // 고정 인증번호
     const CODE = '123456';
+
+    // 이메일 정규 표현식
+    const emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*$/;
 
     // 처음엔 숨기
     password.classList.add('hidden');
 
     // 입력하면 활성화
-    userIdInput.addEventListener('input', pushSendButton);
-    emailInput.addEventListener('input', pushSendButton);
+    userIdInput.addEventListener('input', function () {
+        pushSendButton();
+        resetCertification();
+    });
+    emailInput.addEventListener('input', function () {
+        pushSendButton();
+        resetCertification();
+    });
 
-    function pushSendButton() {
-        if (userIdInput.valued !== '' && emailInput.value !== '') {
+    function pushSendButton () {
+        if (userIdInput.value !== '' && emailInput.value !== '') {
             sendButton.classList.add('on');
         } else {
             sendButton.classList.remove('on');
         }
     }
 
+    function resetCertification () {
+        certInput.value = '';
+        certButton.classList.remove('on');
+    }
+
     // 인증번호 발송
     sendButton.addEventListener('click', function () {
 
-        if (userIdInput.value === '') {
-            alert("아이디를 입력하세요");
-            userIdInput.focus();
+        //아이디와 이메일 형식이 맞지 않을경
+        if (!emailRegex.test(userIdInput.value)) {
+            alert("아이디가 올바르지 않습니다.");
+            emailInput.focus();
             return;
         }
 
-        if (emailInput.value === '') {
-            alert("이메일을 입력하세요")
+        if (!emailRegex.test(emailInput.value)) {
+            alert("이메일 형식이 올바르지 않습니다.");
             emailInput.focus();
             return;
         }
 
         certInput.value = CODE;
         certButton.classList.add('on');
+        alert(`인증번호가 발송되었습니다.\n인증번호는 ${CODE} 입니다.`);
     });
 
     // 인증확인 버튼
     certButton.addEventListener('click', function () {
 
-        if (certInput.value === '') {
-            alert("인증번호를 입력하세요.");
+        if (certInput.value !== CODE) {
+            alert("인증번호가 맞지 않습니다.");
+            certButton.classList.remove('on');
             certInput.focus();
             return;
         }
@@ -63,6 +80,14 @@ window.addEventListener('load', function () {
 
         if (newPwInput) {
             newPwInput.focus();
+        }
+    });
+
+    certInput.addEventListener('input', function() {
+        if (certInput.value === '') {
+            certButton.classList.remove('on');
+        } else {
+            certButton.classList.add('on');
         }
     });
 
@@ -96,4 +121,9 @@ window.addEventListener('load', function () {
 
     newPassword.addEventListener('input', checkPassword);
     recheckPassword.addEventListener('input', checkPassword);
+
+    // 재설정 버튼
+    pwButton.addEventListener('click', function () {
+        alert('비밀번호가 재설정 되었습니다');
+    });
 });

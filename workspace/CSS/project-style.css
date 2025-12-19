@@ -1,18 +1,15 @@
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
 #site {
+    min-height: 100vh;
     height: 100vh;
     position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    transition-duration: 200ms;
 }
 
-#site > header {
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    padding: 15px;
+#site.shift {
+    margin-left: 250px;
 }
 
 #site > header > button {
@@ -21,9 +18,12 @@ html, body {
     border: none;
     background: none;
 
+    position: fixed;
+    top: 15px;
+    left: 15px;
+
     width: 40px;
     height: 40px;
-    display: flex;
     
     background: url("https://i.imgur.com/WkigMaa.png");
     background-repeat: no-repeat;
@@ -34,16 +34,6 @@ html, body {
 
 #site > header > button:hover {
     transform: scale(1.2);
-}
-
-#site > header > a {
-    width: 40px;
-    height: 40px;
-    display: block;
-
-    background-image: url("../images/Upload_image.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* sidebar */
@@ -60,19 +50,21 @@ html, body {
     margin-left: -250px;
     transition-duration: 200ms;
     z-index: 10;
-
-    opacity: 0.9;
-
 }
 
 #sidebar.on {
     margin-left: 0px;
 }
 
-#sidebar > nav > h2 {
+#sidebar > nav > h1 {
+    text-align: center;
+}
+
+#sidebar > nav > h1 > a{
     font-size: 40px;
     font-weight: bolder;
-    text-align: center;
+    text-decoration: none;
+    color: black;
 }
 
 #sidebar > nav > ul {
@@ -122,21 +114,50 @@ html, body {
     transform: rotate(90deg);
 }
 
+/* sidebar 하단부 */
+#sidebar > a:nth-of-type(1) {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+
+    background-image: url("../images/Upload-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sidebar > a:nth-of-type(2) {
+    display: block;
+    width: 30px;
+    height: 30px;
+    
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    background-image: url("../images/Upload-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* contents */
 #contents {
     min-height: calc(100vh - 60px);
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 40px;
+    
     text-align: center;
     box-sizing: border-box;
-
-    justify-content: center;
 }
 
 #contents.on {
-    justify-content: stretch;
+    justify-content: flex-start;
 }
 
 #chat {
@@ -144,12 +165,10 @@ html, body {
     width: 100%;
     margin: 0 auto;
     padding: 10px;
-    height: 70vh;
+    padding-bottom: 120px;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-
-    overflow-y: auto;
+    
     display: none;
 }
 
@@ -170,43 +189,53 @@ html, body {
     background-color: #f3f4f6;
 }
 
-#contents > h2 {
+#contents > section > h2 {
     font-size: 40px;
-    margin: 150px auto 0;
+    margin: 0 auto 20px;
     font-weight: bolder;
 }
 
 /* prompt */
 #prompt {
     display: flex;
+    align-items: center;
     gap: 10px;
 
-    max-width: 700px;
+    max-width: 900px;
     width: 60%;
     margin: 0 auto;
     padding: 15px;
-
+    
     border-radius: 10px;
-    z-index: 5;
     background-color: #eee;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition-duration: 200ms;
+}
+
+#prompt.fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 }
 
 #question {
     flex: 1;
     height: 40px;
-    width: 500px;
-    border: 0;
     padding: 0 10px;
+    border: 0;
     border-radius: 5px;
     font-size: 15px;
+
+    background-color: transparent;
 }
 
 #image {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
-    background-image: url("../images/Upload_image.png");
+    background-image: url("../images/Upload-image.png");
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
@@ -223,15 +252,15 @@ html, body {
 }
 
 #submit {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 
     padding: 0;
     border: 0;
     background-color: transparent;
 
-    background-image: url("../images/enter_button.png");
+    background-image: url("../images/enter-button.png");
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
@@ -244,14 +273,14 @@ html, body {
 }
 
 #site > header > button > span,
-#site > header > a > span,
 #close > span,
+#contents > section > div > span,
 #submit > span,
-#prompt > div > span {
+#prompt > div > span,
+#sidebar > a > span {
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
 }
-

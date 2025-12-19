@@ -1,4 +1,6 @@
 window.addEventListener('load', function () {
+    
+    const site = document.getElementById('site');
     // sidebar
     const menuButton = document.getElementById('menu');
     const sidebar = document.getElementById('sidebar');
@@ -13,25 +15,33 @@ window.addEventListener('load', function () {
     const form = document.getElementById('prompt');
     const chat = document.getElementById('chat');
     const contents = this.document.getElementById('contents');
-    const title = document.querySelector('#contents > h2');
+    const title = document.querySelector('#contents > section > h2');
 
     // sidebar
     menuButton.addEventListener('click', function () {
         sidebar.classList.add('on');
+        site.classList.add('shift');
         menuButton.style.visibility = 'hidden';
+
+        if (form.classList.contains('fixed')) {
+            form.style.left = 'calc(50% + 125px)';
+        }
     });
 
     closeButton.addEventListener('click', function () {
         sidebar.classList.remove('on');
+        site.classList.remove('shift');
         menuButton.style.visibility = 'visible';
+
+        if (form.classList.contains('fixed')) {
+            form.style.left = '50%'
+        }
     });
 
     // upload
-
     imageButton.addEventListener('click', function () {
         upload.click();
     });
-
     
     // masage
     function addMsg(text, who) {
@@ -45,7 +55,7 @@ window.addEventListener('load', function () {
     // chat
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        const text = input.value.trim();
+        const text = input.value;
         
         if (text === "") return;
         
@@ -56,9 +66,17 @@ window.addEventListener('load', function () {
         chat.style.display = 'block';
         title.style.display = 'none';
 
-        contents.classList.add('on');
+        form.classList.add('fixed');
+        contents.classList.add('on');3
 
-        chat.scrollTop = chat.scrollHeight;
+        // 사이드바가 열린상태로 채팅을 입력하면 위치가 제대로 안잡힌걸 수
+        if (sidebar.classList.contains('on')) {
+            form.style.left = 'calc(50% + 125px)';
+        } else {
+            form.style.left = '50%';
+        }
+
+        window.scrollTo(0, document.body.scrollHeight);
     });
 
     // newChat
@@ -72,8 +90,9 @@ window.addEventListener('load', function () {
         upload.value = '';
         
         title.style.display = 'block';
-        input.focus();
-
         contents.classList.remove('on');
+        form.classList.remove('fixed');
+
+        input.focus();
     });
 });
