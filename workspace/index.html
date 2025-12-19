@@ -1,219 +1,176 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Portal</title>
-    <link rel="stylesheet" href="../workspace/CSS/reset.css">
-    <link rel="stylesheet" href="../workspace/CSS/style.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     
 </head>
 <body>
 
-<!-- Header -->
-<header class="header">
-    <div class="header-inner">
-        <h1 class="logo">JDJS</h1>
+<header id="header">
+    <div id="header-inner">
+        <a href="#home"id="logo">JDJS</a>
 
+        <nav id="nav">
+            <ul>
+                <li><a href="#">AI 도구</a></li>
+                <li><a href="#">기능</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">MOD</a></li>
+            </ul>
+        </nav>
         
-        <div class="header-right">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#">AI 도구</a></li>
-                    <li class="nav-item"><a href="#">기능</a></li>
-                    <li class="nav-item"><a href="#">소개</a></li>
-                    <li class="nav-item"><a href="#">MOD</a></li>
-                </ul>
-            </nav>
-            
-            <button class="theme-toggle" aria-label="다크모드 토글">
-                <span class="toggle-text">OFF</span>
-                <span class="toggle-circle"></span>
-            </button>
+        <button>
+            <span>OFF</span>
+            <span></span>
+        </button>
 
-            <a href="../workspace/members/login.html" class="btn-start">Log In</a>
-
-        </div>
+        <a href="login.html" id="login-btn">Log In</a>
     </div>
 </header>
 
-<!-- Main -->
 <main>
 
-<!-- Hero Section -->
-<section class="hero">
-    <p class="hero-badge">차세대 AI 플랫폼</p>
-    <h2 class="hero-title">
-        AI로 만드는 <br />
-        <span class="highlight">스마트한 미래</span>
+<section id="hero">
+    <p>차세대 AI 플랫폼</p>
+    <h2>
+        AI로 만드는 <br>
+        <span>스마트한 미래</span>
     </h2>
-    <p class="hero-description">
+    <p>
         최신 AI 기술을 활용한 다양한 도구와 서비스를 한 곳에서 경험해보세요.
     </p>
 </section>
 
-<!-- AI Tools Section -->
-<section class="tools-section">
-    <div class="tools-inner">
-        <h3 class="section-title">강력한 AI 도구</h3>
-        <p class="section-description">
-        다양한 분야에서 활용 가능한 최첨단 AI 도구를 만나보세요
-        </p>
+<section id="tools">
+    <div id="tools-inner">
+        <h3>강력한 AI 도구</h3>
+        <p>다양한 분야에서 활용 가능한 최첨단 AI 도구를 만나보세요</p>
 
-        <div class="tool-list">
-            <a href="../workspace/members/if.html" class="tool-link">
-            <article class="tool-card">
-                <div class="tool-icon">😀</div>
-                <h4 class="tool-title">검색창</h4>
-                <p class="tool-text">무엇이든 검색하세요!</p>
-            </article>
-        </a>
+        <div id="tool-list">
 
-            <article class="tool-card">
-                <div class="tool-icon">🖼️</div>
-                <h4 class="tool-title">이미지 생성</h4>
-                <p class="tool-text">텍스트 설명 기반 이미지 생성</p>
+            <article>
+                <h4>검색창</h4>
+                <p>무엇이든 검색하세요!</p>
             </article>
 
-            <article class="tool-card">
-                <div class="tool-icon">📄</div>
-                <h4 class="tool-title">문서 요약</h4>
-                <p class="tool-text">긴 문서를 빠르게 요약</p>
+
+            <article>
+                <h4>이미지 생성</h4>
+                <p>텍스트 기반 이미지 생성</p>
             </article>
 
-            <article class="tool-card">
-                <div class="tool-icon">🎥</div>
-                <h4 class="tool-title">비디오 편집</h4>
-                <p class="tool-text">AI 기반 영상 편집 기능</p>
+
+
+            <article>
+                <h4>문서 요약</h4>
+                <p>긴 문서를 빠르게 요약</p>
             </article>
 
-            <article class="tool-card">
-                <div class="tool-icon">🎤</div>
-                <h4 class="tool-title">음성 인식</h4>
-                <p class="tool-text">음성을 텍스트로 변환</p>
+
+            <article>
+                <h4>음성 인식</h4>
+                <p>음성을 텍스트로 변환</p>
             </article>
 
-            <article class="tool-card">
-                <div class="tool-icon">🌐</div>
-                <h4 class="tool-title">번역</h4>
-                <p class="tool-text">다국어 번역 서비스</p>
+            <article>
+                <h4>비디오 편집</h4>
+                <p>AI기반 영상 편집</p>
             </article>
 
-            <article class="tool-card">
-                <div class="tool-icon">💻</div>
-                <h4 class="tool-title">코드 어시스턴트</h4>
-                <p class="tool-text">개발자를 위한 코드 지원</p>
-            </article>
+           <article>
+                <h4>번역</h4>
+                <p>다국어 번역 서비스</p>
+           </article>
 
-            <article class="tool-card">
-                <div class="tool-icon">⚙️</div>
-                <h4 class="tool-title">자동화 도구</h4>
-                <p class="tool-text">반복 작업 자동화</p>
-            </article>
+           <article>
+                <h4>코드 어시스 턴트</h4>
+                <p>개발자를 위한 코드 지원</p>
+           </article>
+
+           <article>
+                <h4>자동화 도구</h4>
+                <p>반복 작업 자동화</p>
+           </article>
+
         </div>
     </div>
 </section>
 
-<!-- Why AI Portal -->
-<section class="why-section">
-    <h3 class="section-title">왜 AI Portal을 선택해야 될까요?</h3>
-    <p class="section-description">
-        사용자 중심의 강력한 AI 플랫폼을 제공합니다
-    </p>
+<section id="why">
+    <h3>왜 AI Portal을 선택해야 할까요?</h3>
+    <p>사용자 중심의 강력한 AI 플랫폼을 제공합니다</p>
 
-    <div class="feature-list">
-        <article class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <h4 class="feature-title">높은 정확도</h4>
-            <p class="feature-text">신뢰도 높은 AI 결과 제공</p>
+    <div id="feature-list">
+        <article>
+            <h4>높은 정확도</h4>
+            <p>신뢰도 높은 AI 결과</p>
         </article>
 
-        <article class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h4 class="feature-title">실시간 처리</h4>
-            <p class="feature-text">빠르고 안정적인 응답</p>
+        <article>
+            <h4>실시간 처리</h4>
+            <p>빠르고 안정적인 응답</p>
         </article>
 
-        <article class="feature-card">
-            <div class="feature-icon">🌍</div>
-            <h4 class="feature-title">글로벌 서비스</h4>
-            <p class="feature-text">전 세계 사용자 지원</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">🧩</div>
-            <h4 class="feature-title">확장성</h4>
-            <p class="feature-text">다양한 기능 확장 가능</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">🧠</div>
-            <h4 class="feature-title">사용자 친화적 UI</h4>
-            <p class="feature-text">누구나 쉽게 사용</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">🔄</div>
-            <h4 class="feature-title">지속적 업데이트</h4>
-            <p class="feature-text">항상 최신 기술 반영</p>
+        <article>
+            <h4>글로벌 서비스</h4>
+            <p>전 세계 사용자 지원</p>
         </article>
     </div>
 </section>
 
 </main>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
+<footer id="footer">
+    <div id="footer-inner">
         <div>
-            <h4 class="footer-logo">AI Portal</h4>
-            <p class="footer-description">
-                2팀의 집단지성이 들어간 작업 입니다.
-            </p>
+            <h4>AI Portal</h4>
+            <p>2팀의 집단지성이 들어간 작업입니다.</p>
         </div>
 
-        <div class="footer-links">
+        <div>
             <h5>우리 팀</h5>
             <ul>
                 <li>팀명: JDJS</li>
                 <li>팀 소개</li>
                 <li>팀원 소개</li>
-                <li>역할 분담</li>
             </ul>
         </div>
 
-        <div class="footer-links">
+        <div>
+            <h5>팀원</h5>
+            <ul>
+                <li>박민성</li>
+                <li>김재웅</li>
+                <li>정창규</li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>우리팀 화이팅</h5>
+            <ul>
+                <li>할 수 있다</li>
+                <li>화이팅</li>
+                <li>열심히 해보자</li>
+            </ul>
+        </div>
+
+        <div>
             <h5>프로젝트</h5>
             <ul>
                 <li>프로젝트 소개</li>
-                <li>기획 의도</li>
                 <li>주요 기능</li>
-                <li>향후 계획</li>
-            </ul>
-        </div>
-
-        <div class="footer-links">
-            <h5>개발 기록</h5>
-            <ul>
-                <li>기술 스택</li>
-                <li>개발 일지</li>
-                <li>트러블 슈팅</li>
-            </ul>
-        </div>
-
-        <div class="footer-links">
-            <h5>약속</h5>
-            <ul>
-                <li>학습용 프로젝트</li>
-                <li>상업 목적X</li>
             </ul>
         </div>
     </div>
 
-    <p class="footer-copy">
-        © 2025 AI Portal Team. All rights reserved.
+    <p id="copyright">
+        © 2025 AI Portal Team
     </p>
 </footer>
-<script src="../workspace/JavaScript/darkmod.js"></script>
+
 </body>
 </html>
