@@ -24,5 +24,6 @@
 /* hover */
 #feature-list > article:hover {
     border-color: #2563eb;
+    transform: translateY(-4px);
     cursor: pointer;
 }
