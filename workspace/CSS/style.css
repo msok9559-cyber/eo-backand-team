@@ -1,0 +1,358 @@
+/* Header */
+#header {
+    border-bottom: 1px solid #ddd;
+}
+
+#header-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+}
+
+
+#nav > ul {
+    display: flex;
+    gap: 16px;
+}
+
+#nav > ul > li > a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+#login-btn {
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+/* toggle button */
+#header-inner > button {
+    width: 64px;
+    height: 28px;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    transition: background-color 0.3s;
+}
+
+/* OFF / ON 텍스트 */
+#header-inner > button > span:first-child {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    font-weight: bold;
+    color: #374151;
+    pointer-events: none;
+    z-index: 3; 
+}
+
+/* 동그라미 */
+#header-inner > button > span:last-child {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+/* ===== 다크모드 ON ===== */
+
+#header-inner > button.active {
+    background-color: #374151;
+}
+
+#header-inner > button.active > span:last-child {
+    transform: translateX(36px);
+}
+
+#header-inner > button.active > span:first-child {
+    color: #ffffff;
+}
+
+/* Hero Section */
+
+#hero {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#hero > p:first-child {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+#hero > h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+#hero > h2 > span {
+    color: #1d4ed8;
+}
+
+#hero > p:last-child {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Tools Section */
+
+#tools {
+    background-color: #f3f4f6;
+    padding: 80px 20px;
+}
+
+#tools-inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#tools-inner > h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+ #tools-inner > p {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+#tool-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+#tool-list > article {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 24px;
+
+    position: relative;
+    padding-top: 52px;
+}
+#tool-list > article::before {
+    content: "🔍";              
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 24px;
+    opacity: 0.9;
+    pointer-events: none;
+}
+#tool-list > article:nth-child(1)::before { content: "🔍"; }
+#tool-list > article:nth-child(2)::before { content: "🎨"; }
+#tool-list > article:nth-child(3)::before { content: "📄"; }
+#tool-list > article:nth-child(4)::before { content: "🎤"; }
+#tool-list > article:nth-child(5)::before { content: "🎬"; }
+#tool-list > article:nth-child(6)::before { content: "🌍"; }
+#tool-list > article:nth-child(7)::before { content: "💻"; }
+#tool-list > article:nth-child(8)::before { content: "⚙️"; }
+
+#tool-list > article > h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#tool-list > article > p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Why Section*/
+
+#why {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#why > h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+#why > p {
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+#feature-list {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+#why > #feature-list > article {
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: left;
+
+    position: relative;
+    padding-top: 64px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+#feature-list > article::before {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-size: 28px;
+    opacity: 0.9;
+    pointer-events: none;
+}
+#feature-list > article:nth-child(1)::before {content: "🎯";}
+#feature-list > article:nth-child(2)::before {content: "⚡";}
+#feature-list > article:nth-child(3)::before {content: "🌐";}
+
+#feature-list > article > h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#feature-list > article > p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Footer*/
+
+#footer {
+    background-color: #000;
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+#footer-inner {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+#footer-inner > div > h4,
+#footer-inner > div > h5 {
+    margin-bottom: 12px;
+}
+
+#footer-inner > div > p,
+#footer-inner > div > ul > li {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 12px;
+}
+
+#copyright {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* ===== Dark Mode (Light Dark) ===== */
+
+body.dark #header {
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+body.dark #logo {
+    color: #ffffff;
+}
+
+body.dark #nav > ul > li > a {
+    color: #f1f1f1;
+}
+
+body.dark #header > #header-inner > #login-btn {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+/* Hero */
+body.dark #hero {
+    background-color: #1f1f1f;
+}
+
+body.dark #hero > h2 > span {
+    color: #ffffff;
+}
+
+body.dark #hero > p {
+    color: #c7c7c7;
+}
+
+/* Tools */
+body.dark #tools {
+    background-color: #1f1f1f;
+}
+
+body.dark #tools > #tools-inner > #tool-list > article {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+}
+
+body.dark #tools > #tools-inner > #tool-list > article > p {
+    color: #c7c7c7;
+}
+
+/* Why */
+body.dark #why {
+    background-color: #1f1f1f;
+}
+
+body.dark #why > #feature-list > article {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+}
+
+body.dark #why > #feature-list > article > p {
+    color: #c7c7c7;
+}
+
+/* Footer */
+body.dark #footer {
+    background-color: #181818;
+}
+
+body.dark #footer > #footer-inner > div > p,
+body.dark #footer > #footer-inner > div > ul > li,
+body.dark #copyright {
+    color: #c7c7c7;
+}
