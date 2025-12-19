@@ -1,10 +1,13 @@
-const toggleBtn = document.querySelector('.theme-toggle');
-const toggleText = toggleBtn.querySelector('.toggle-text');
+const toggleBtn =
+    document.querySelector('#header > #header-inner > button');
 
-toggleBtn.addEventListener('click',() =>{
-    toggleBtn.classList.toggle('active');
+const toggleText =
+    toggleBtn.querySelector('span:first-child');
+
+toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('on');
     document.body.classList.toggle('dark');
 
     toggleText.textContent =
-        document.body.classList.contains('dark') ? "ON" : "OFF"
+        document.body.classList.contains('dark') ? 'ON' : 'OFF';
 });
