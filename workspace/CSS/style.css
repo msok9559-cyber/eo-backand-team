@@ -163,6 +163,7 @@
     position: relative;
     padding-top: 52px;
 }
+
 #tool-list > article::before {
     content: "🔍";              
     position: absolute;
@@ -184,6 +185,11 @@
 #tool-list > article > h4 {
     font-size: 18px;
     margin-bottom: 8px;
+}
+
+#tool-list > article > h4 > a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #tool-list > article > p {
