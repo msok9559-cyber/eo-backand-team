@@ -65,7 +65,7 @@ project
 ┣ CSS
 ┃ ┣ reset.css
 ┃ ┣ style.css
-┃ ┣signup.css
+┃ ┣ signup.css
 ┃ ┣ project-style.css
 ┃ ┣ effect.css
 ┃ ┗ password.css
