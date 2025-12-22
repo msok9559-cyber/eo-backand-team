@@ -64,15 +64,18 @@ project
 ┣ CSS
 ┃ ┣ reset.css
 ┃ ┣ style.css
-┃ ┗ signup.css
-┃ ┗ project-style.css
-┃ ┗ effect.css
+┃ ┣signup.css
+┃ ┣ project-style.css
+┃ ┣ effect.css
 ┃ ┗ password.css
 ┣ JavaScript
 ┃ ┣ darkmod.js
+┃ ┣ password.js
+┃ ┣ project-java.js
 ┃ ┗ signup.js
 ┣ members
 ┃ ┣ login.html
+┃ ┣ password.html
 ┃ ┗ signup.html
 ┗ index.html
 ```
