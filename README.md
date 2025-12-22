@@ -59,6 +59,7 @@
 - JavaScript를 이용한 질문페이지 동적 답볍 처리
 
 ---
+## 프로젝트 구조
 ```
 project
 ┣ CSS
@@ -79,6 +80,8 @@ project
 ┃ ┗ signup.html
 ┗ index.html
 ```
+
+---
 
 ## 📚 참고 자료
 - W3Schools
