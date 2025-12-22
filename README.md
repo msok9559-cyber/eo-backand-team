@@ -60,18 +60,5 @@
 
 ---
 
- project
-┣  CSS
-┃ ┣ reset.css
-┃ ┣ style.css
-┃ ┗ signup.css
-┣  JavaScript
-┃ ┣ darkmod.js
-┃ ┗ signup.js
-┣  members
-┃ ┣ login.html
-┃ ┗ signup.html
-┗ index.html
-
 ## 📚 참고 자료
 - W3Schools
