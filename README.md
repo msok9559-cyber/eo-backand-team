@@ -59,6 +59,23 @@
 - JavaScript를 이용한 질문페이지 동적 답볍 처리
 
 ---
+```
+project
+┣ CSS
+┃ ┣ reset.css
+┃ ┣ style.css
+┃ ┗ signup.css
+┃ ┗ project-style.css
+┃ ┗ effect.css
+┃ ┗ password.css
+┣ JavaScript
+┃ ┣ darkmod.js
+┃ ┗ signup.js
+┣ members
+┃ ┣ login.html
+┃ ┗ signup.html
+┗ index.html
+```
 
 ## 📚 참고 자료
 - W3Schools
