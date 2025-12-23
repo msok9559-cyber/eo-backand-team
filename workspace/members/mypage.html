@@ -6,85 +6,64 @@
   <title>내 정보</title>
   <link rel="stylesheet" href="../CSS/CGreset.css">
   <link rel="stylesheet" href="../CSS/Mypage.css">
+  <link rel="stylesheet" href="../JavaScript/mypage.js">
 </head>
 <body>
 
   <main id="main-id">
     <!-- 회원정보 -->
-  <section id="user-info">
-    <h1>회원 정보</h1>
-    <div>
-      <form method="post" action="/server/program">      
-        
-        <fieldset id="amugona">
-          <legend>기본정보</legend>        
-          <div>
-            
-            <div id="name-row" class="info-row">
-              <span id="name-label">이름</span> 
-              <span id="name-value">정창규</span>           
-              <button id="edit-name-btn">수정</button>
-            </div>
-
+    <section id="user-info">
+      <h1>회원 정보</h1>
+      <div>
+        <form method="post" action="/server/program">      
+          
+          <fieldset id="amugona">
+            <legend>기본정보</legend>        
+            <div>
+              
+              <div id="name-row" class="info-row">
+                <span id="name-label">이름</span> 
+                <span id="name-value">정XX</span>           
+              </div>
+              
             <div id="name-row" class="info-row">
               <span id="name-label">핸드폰</span> 
               <span id="name-value">010-xxxx-xxxx</span>           
-              <button id="edit-name-btn">수정</button>
             </div>
-
+            
             <div id="name-row" class="info-row">
               <span id="name-label">E-mail</span> 
               <span id="name-value">jhxxxxx@xxxxx.com</span>           
-              <button id="edit-name-btn">수정</button>
             </div>
           </div>
         </fieldset>
       </form>
-  </section>
-
-            
-            <div id="popup" class="popup hidden">
-              <h3 id="popup-title">이메일 수정 인증</h3>
-              <p id="popup-desc">연락처 이메일을 수정하기 위해 인증절차가 필요합니다.</p>
-              <input type="email" id="current-email" placeholder="현재 이메일 입력">
-              <input type="email" id="new-email" placeholder="변경할 이메일 입력">
-              <input type="text" id="auth-code" placeholder="인증번호 입력">
-              <button id="confirm-btn">확인</button>
-              <button id="cancel-btn" onclick="closePopup()">취소</button>
-            </div>
-            
-            
-            
-
-
-  <section>
+    </section>
+    
+    
+    <section>
       <form method="post" action="/server/program">
         
         <fieldset id="section-section">
           <legend>보안</legend>          
           <div>
-
-            <div>
-              <label for="name">ID</label>
-              <input type="text" id="ID" name="ID" placeholder="아이디">
+            
+            <div id="name-row" class="info-row">
+              <span id="name-label">아이디</span> 
+              <span id="name-value">jxxxxxx</span>           
             </div>
-
-            <div>
-              <label for="name">비밀번호</label>
-              <input type="text" id="password" name="password" placeholder="비밀번호">
+            
+            <div id="name-row" class="info-row">
+              <span id="name-label">비밀번호</span> 
+              <span id="name-value">xxxxxxxxxxxx</span>           
             </div>
-          
-            <div>
-              <label for="phone">2단계 인증</label>
-              <input type="tel" id="twofa" name="twofa" placeholder="휴대전화">
-            </div>
-
+                        
             <div id="toggle-group">
               <label for="toggle-check">해외 로그인 차단</label>
               <input type="checkbox" id="toggle-check">
               <label for="toggle-check" id="toggle-btn"></label>
             </div>
-
+            
             <div id="toggle-group2">
               <label for="toggle2-check">타지역 로그인 차단</label>
               <input type="checkbox" id="toggle2-check">
@@ -94,16 +73,18 @@
           </div>
         </fieldset>
       </form>
-  </section>
-
+    </section>
+    
     <section id="account-actions">
       <h2>계정 관리</h2>
       <form method="post" action="/withdraw">
         <fieldset>
-        <div>
-          <button type="submit" class="btn danger">회원수정</button>
-          <button type="submit" class="btn danger">회원탈퇴</button>
-        </div>
+          <div>
+            <button type="submit" class="btn danger">회원수정</button>
+            <button type="submit" class="btn danger">회원탈퇴</button>
+          </div>
+          
+
         </fieldset>
       </form>
     </section>  

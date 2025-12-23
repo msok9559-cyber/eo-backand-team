@@ -1,11 +1,11 @@
 /* 메인 콘텐츠 가운데 정렬 */
 main {
-  max-width: 350px;
-  margin: 150px 1100px;
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 50px;
+  margin: 100px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #user-info > h1 {
