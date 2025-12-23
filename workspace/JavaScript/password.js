@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
     const pwMsg = document.getElementById('pwMsg');
 
     // 고정 인증번호
-    const CODE = '123456';
+    const CODE = '985632';
 
     // 이메일 정규 표현식
     const emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*$/;
@@ -50,27 +50,27 @@ window.addEventListener('load', function () {
 
         //아이디와 이메일 형식이 맞지 않을경
         if (!emailRegex.test(userIdInput.value)) {
-            alert("아이디가 올바르지 않습니다.");
+            window.alert("아이디가 올바르지 않습니다.");
             emailInput.focus();
             return;
         }
 
         if (!emailRegex.test(emailInput.value)) {
-            alert("이메일 형식이 올바르지 않습니다.");
+            window.alert("이메일 형식이 올바르지 않습니다.");
             emailInput.focus();
             return;
         }
 
         certInput.value = CODE;
         certButton.classList.add('on');
-        alert(`인증번호가 발송되었습니다.\n인증번호는 ${CODE} 입니다.`);
+        window.alert(`인증번호가 발송되었습니다.\n인증번호는 ${CODE} 입니다.`);
     });
 
     // 인증확인 버튼
     certButton.addEventListener('click', function () {
 
         if (certInput.value !== CODE) {
-            alert("인증번호가 맞지 않습니다.");
+            window.alert("인증번호가 맞지 않습니다.");
             certButton.classList.remove('on');
             certInput.focus();
             return;
@@ -124,6 +124,6 @@ window.addEventListener('load', function () {
 
     // 재설정 버튼
     pwButton.addEventListener('click', function () {
-        alert('비밀번호가 재설정 되었습니다');
+        window.alert('비밀번호가 재설정 되었습니다');
     });
 });

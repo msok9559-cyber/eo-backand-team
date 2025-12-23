@@ -1,12 +1,11 @@
 /* 메인 콘텐츠 가운데 정렬 */
-#main > #user-info {
-  height: 100vh;
-  max-width: 150px;
-  margin: 0px 10px;
-  background-color: #ffffff;
+#main-id{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 50px;
+  margin-top: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #user-info > h1 {
@@ -20,8 +19,9 @@
 #amugona {
   border: 2px solid #0d0e0e;
   border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 60px;
+  width: 320px;
+  margin: 20px;
   background-color: transparent;
 }
 
@@ -32,10 +32,15 @@
   font-family: arial, sans-serif;
 }
 
-#deit-name-btn {
+.info-row {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+#edit-name-btn {
   padding: 4px 10px;
   font-size: 13px;
-  background-color: #007acc;
+  background-color: #333435;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -47,7 +52,7 @@
 }
 
 /* 필드셋 제목 스타일 */
-#amugona > fieldset legend {
+#amugona fieldset > legend {
   font-size: 1.2rem;
   font-weight: bold;
   color: #007acc;
@@ -87,10 +92,11 @@
 
 /* 필드셋 전체 스타일 */
 #section-section {
+  width: 380px;
+  padding: 30px;
+  margin-bottom: 20px;
   border: 2px solid #0d0e0e;
   border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 30px;
   background-color: transparent;
 }
 

@@ -48,11 +48,11 @@ window.addEventListener('load', function () {
     
     // masage
     function addMsg(text, who) {
-        const div = document.createElement('div');
+        const Msg = document.createElement('div');
         
-        div.className = 'msg ' + who; 
-        div.textContent = text;
-        chat.appendChild(div);
+        Msg.className = 'msg ' + who; 
+        Msg.textContent = text;
+        chat.appendChild(Msg);
     }
 
     // chat
@@ -67,6 +67,7 @@ window.addEventListener('load', function () {
         
         // 전송후 다시 1줄 상태로 변
         question.style.height = baseHeight + 'px';
+        question.classList.remove('font');
 
         chat.style.display = 'block';
         title.style.display = 'none';
@@ -99,6 +100,7 @@ window.addEventListener('load', function () {
         contents.classList.remove('on');
         form.classList.remove('fixed');
 
+        question.classList.remove('font');
         question.focus();
     });
 
@@ -106,9 +108,11 @@ window.addEventListener('load', function () {
     question.addEventListener('input', function () {
         if (this.value === '') {
             this.style.height = baseHeight + 'px';
+            question.classList.remove('font');
         } else {
             this.style.height = baseHeight + 'px';
             this.style.height = this.scrollHeight + 'px';
+            question.classList.add('font');
         }
     });
 

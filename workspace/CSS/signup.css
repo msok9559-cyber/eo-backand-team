@@ -3,29 +3,29 @@
     min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 60px 20px;
-    background: #f3f4f6;
+    background-color: #f3f4f6;
 }
 
 /* 박스 */
-.auth-box {
+#auth-container > section {
     width: 100%;
     max-width: 600px;
-    background: #fff;
+    background-color: #fff;
     padding: 48px 40px;
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* 제목 */
-.auth-title {
+#auth-container > section > h2 {
     text-align: center;
     font-size: 28px;
     margin-bottom: 8px;
+    font-weight: bolder;
 }
 
-.auth-desc {
+#auth-container > section > p {
     text-align: center;
     font-size: 14px;
     color: gray;
@@ -33,7 +33,7 @@
 }
 
 /* form */
-.auth-form {
+#auth-form {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -60,7 +60,6 @@
 /* 메시지 공통 */
 .form-message {
     font-size: 13px;
-    display: none;
     padding-left: 150px;
     display: none;
 }
@@ -88,21 +87,16 @@
     padding: 10px 14px;
     border-radius: 6px;
     border: 1px solid #2563eb;
-    background: #fff;
+    background-color: #fff;
     color: #2563eb;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .btn-check:hover,
 .btn-auth:hover {
-    background: #2563eb;
+    background-color: #2563eb;
     color: #fff;
-}
-
-/* 메시지 */
-.form-message {
-    font-size: 13px;
-    display: none;
 }
 
 /* 약관 */
@@ -119,9 +113,10 @@
     margin-top: 20px;
     padding: 14px;
     border-radius: 8px;
-    background: #2563eb;
+    background-color: #2563eb;
     color: white;
     font-size: 15px;
+    cursor: pointer;
 }
 
 /* footer */
@@ -132,7 +127,7 @@
     color: gray;
 }
 
-#auth-footer a {
+#auth-footer > a {
     color: #2563eb;
     font-weight: bold;
 }
