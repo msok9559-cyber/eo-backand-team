@@ -55,11 +55,11 @@
     margin-left: 0px;
 }
 
-#sidebar > nav > h1 {
+#sidebar > nav > h2 {
     text-align: center;
 }
 
-#sidebar > nav > h1 > a{
+#sidebar > nav > h2 > a{
     font-size: 40px;
     font-weight: bolder;
     text-decoration: none;
