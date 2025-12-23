@@ -4,6 +4,13 @@ window.addEventListener('load', function () {
     const search = document.getElementById('search');
     if (search) {
         search.addEventListener('click', function () {
+            const loginUser = localStorage.getItem("loginUser");
+            if(!loginUser){
+                alert("로그인후 이용가능합니다");
+                location.href = "./members/login.html";
+                return;
+            }
+
             search.querySelector('a').click();
         });
     }
