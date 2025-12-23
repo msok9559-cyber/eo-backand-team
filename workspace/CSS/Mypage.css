@@ -1,0 +1,259 @@
+/* 메인 콘텐츠 가운데 정렬 */
+#main > #user-info {
+  height: 100vh;
+  max-width: 150px;
+  margin: 0px 10px;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#user-info > h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0c0c0c;
+}
+
+/* 필드셋 전체 스타일 */
+#amugona {
+  border: 2px solid #0d0e0e;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+#profile-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: arial, sans-serif;
+}
+
+#deit-name-btn {
+  padding: 4px 10px;
+  font-size: 13px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#edit-name-btn:hover {
+  background-color: #005fa3;
+}
+
+/* 필드셋 제목 스타일 */
+#amugona > fieldset legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+/* 각 줄 정렬 */
+#amugona> div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* label 고정 너비 */
+#amugona form > label {
+  display: block;
+  font-weight: bold;
+}
+
+/* input 넓게 차지 */
+#amugona form > input {
+  width: 80%;
+  padding: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid #911414;
+  border-radius: 4px;
+}
+
+#amugona > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------보안----------------------------------------------------------- */
+
+/* 필드셋 전체 스타일 */
+#section-section {
+  border: 2px solid #0d0e0e;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+
+/* 필드셋 제목 스타일 */
+#section-section > fieldset legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+/* 각 줄 정렬 */
+#section-section > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* label 고정 너비 */
+#section-section form > div label {
+  display: block;
+  font-weight: bold;
+}
+
+/* input 넓게 차지 */
+#section-section form > div input {
+  width: 80%;
+  padding: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid #911414;
+  border-radius: 4px;
+}
+
+#section-section > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------토글 스위치------------------------------- */
+
+/* 공통 토글 그룹 스타일 */
+#toggle-group,
+#toggle-group2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-family: arial, sans-serif;
+}
+
+/* 체크박스 숨기기 */
+#toggle-group input[type="checkbox"],
+#toggle-group2 input[type="checkbox"] {
+  display: none;
+}
+
+/* 토글 버튼 기본 스타일 */
+#toggle-btn,
+#toggle-btn2 {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* 기본 상태: OFF */
+#toggle-btn::before,
+#toggle-btn2::before {
+  content: "OFF";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* 토글 버튼 내부 원 */
+#toggle-group #toggle-btn::after,
+#toggle-group2 #toggle-btn2::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(253, 251, 251, 0.5);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+
+#toggle-group input[type="checkbox"]:checked + #toggle-btn {
+  background-color: #4caf50;
+}
+
+
+#toggle-check:checked + #toggle-btn::before {
+  content: "ON";
+  color: #000;
+}
+
+/* 체크 상태일 때 원 이동 */
+#toggle-group input[type="checkbox"]:checked + #toggle-btn::after {
+  transform: translateX(50px);
+}
+
+#toggle-group2 input[type="checkbox"]:checked + #toggle-btn2 {
+  background-color: #4caf50;
+}
+
+#toggle2-check:checked + #toggle-btn2::before {
+  content: "ON";
+  color: #000;
+}
+
+#toggle-group2 input[type="checkbox"]:checked + #toggle-btn2::after {
+  transform: translateX(50px);
+}
+
+#toggle-check:focus + #toggle-btn,
+#toggle-check:focus + #toggle-btn2 {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+
+/* ----------------------------계정관리----------------------------------- */
+
+#account-actions > h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0c0c0c;
+}
+
+/* 계정 관리 섹션 전체 가운데 정렬 */
+#account-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* 버튼 묶음을 한 줄에 가운데 정렬 */
+#account-actions > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-top: 50px;
+}
+
+/* 버튼 공통 스타일 */
+#account-actions > button {
+  padding: 16px;
+  font-size: 14px;
+}
