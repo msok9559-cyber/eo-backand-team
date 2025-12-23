@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수정페이지</title>
+  <link rel="stylesheet" href="../CSS/CGreset.css">
+  <link rel="stylesheet" href="../CSS/correction.css">
+</head>
+<body>
+
+  <main>
+    <!-- 회원정보 -->
+  <section id="user-info">
+    <h1>수정 페이지</h1>
+    <div>
+      <form method="post" action="/server/program">      
+        
+        <fieldset id="amugona">
+          <legend>기본정보</legend>        
+          <div>
+            <div>
+              <label for="name">이름</label>
+              <input type="text" id="name" name="name" placeholder="이름">            
+            </div>
+
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="현재 E-mail">
+              <input type="email" id="email" name="email" placeholder="새 E-mail">         
+            </div>
+
+            <div>
+              <label for="phone">휴대전화</label>
+              <input type="tel" id="phone" name="phone" placeholder="현재 휴대전화"> 
+              <input type="tel" id="phone" name="phone" placeholder="새 휴대전화">       
+            </div>
+          </div>
+        </fieldset>
+      </form>
+  </section>
+
+
+  <section>
+      <form method="post" action="/server/program">
+        
+        <fieldset id="section-section">
+          <legend>보안</legend>          
+          <div>
+            <div>
+              <label for="name">비밀번호</label>
+              <input type="text" id="password" name="password" placeholder="현재 비밀번호">
+              <input type="text" id="password" name="password" placeholder="새 비밀번호">
+            </div>
+
+            <div>
+              <label for="phone">질의응답</label>
+              <input type="tel" id="qa" name="qa" placeholder="당신의 꿈은 무엇입니까?">
+              <input type="tel" id="qa" name="qa" placeholder="질의응답">
+            </div>
+          
+            <div>
+              <label for="phone">2단계 인증</label>
+              <input type="tel" id="twofa" name="twofa" placeholder="휴대전화">
+            </div>     
+          </div>
+
+        </fieldset>
+      </form>
+  </section>
+
+    <section id="account-actions">
+      <h2>회원 수정</h2>
+      <form method="post" action="/withdraw">
+        <fieldset>
+        <div>
+          <button type="submit" class="btn danger">회원수정 완료</button>
+        </div>
+        </fieldset>
+      </form>
+    </section>  
+  </main>
+</body>
+</html>

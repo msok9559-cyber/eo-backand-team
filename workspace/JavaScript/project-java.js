@@ -9,13 +9,16 @@ window.addEventListener('load', function () {
     const imageButton = document.getElementById('image');
     const upload = document.getElementById('upload');
     // newChat
-    const input = document.getElementById('question');
+    const question = document.getElementById('question');
     const newChat = document.getElementById('newChat');
     // chat
     const form = document.getElementById('prompt');
     const chat = document.getElementById('chat');
     const contents = this.document.getElementById('contents');
     const title = document.querySelector('#contents > section > h2');
+    
+    // textarea 높이를 저장
+    const baseHeight = question.scrollHeight;
 
     // sidebar
     menuButton.addEventListener('click', function () {
@@ -55,21 +58,23 @@ window.addEventListener('load', function () {
     // chat
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        const text = input.value;
-        
+        const text = question.value;
         if (text === "") return;
         
         addMsg(text, 'user');
         addMsg('고정된 답변입니다', 'bot');
-        input.value = '';
+        question.value = '';
         
+        // 전송후 다시 1줄 상태로 변
+        question.style.height = baseHeight + 'px';
+
         chat.style.display = 'block';
         title.style.display = 'none';
 
         form.classList.add('fixed');
-        contents.classList.add('on');3
+        contents.classList.add('on');
 
-        // 사이드바가 열린상태로 채팅을 입력하면 위치가 제대로 안잡힌걸 수
+        // 사이드바가 열린상태로 채팅을 입력하면 위치가 제대로 안 잡힌걸 수정
         if (sidebar.classList.contains('on')) {
             form.style.left = 'calc(50% + 125px)';
         } else {
@@ -86,13 +91,33 @@ window.addEventListener('load', function () {
         chat.innerHTML = '';
         chat.style.display = 'none';
         
-        input.value = '';
+        question.value = '';
+        // question.style.height = baseHeight + 'px';
         upload.value = '';
         
         title.style.display = 'block';
         contents.classList.remove('on');
         form.classList.remove('fixed');
 
-        input.focus();
+        question.focus();
     });
+
+    //채팅 길게 입력하면 창 커지게하기, 글자입력후 지웠을때 원상복귀
+    question.addEventListener('input', function () {
+        if (this.value === '') {
+            this.style.height = baseHeight + 'px';
+        } else {
+            this.style.height = baseHeight + 'px';
+            this.style.height = this.scrollHeight + 'px';
+        }
+    });
+
+    // Shift+Enter 누르면 줄바꿈
+    question.addEventListener('keydown', function(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
+            form.requestSubmit();
+        }
+    });
+
 });
