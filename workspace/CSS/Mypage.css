@@ -1,7 +1,8 @@
 /* 메인 콘텐츠 가운데 정렬 */
-main {
-  max-width: 350px;
-  margin: 150px 1100px;
+#main > #user-info {
+  height: 100vh;
+  max-width: 150px;
+  margin: 0px 10px;
   background-color: #ffffff;
   padding: 50px;
   border-radius: 10px;
