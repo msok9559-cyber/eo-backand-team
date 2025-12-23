@@ -41,6 +41,16 @@
     border-radius: 4px;
     font-size: 14px;
 }
+#mypage-btn {
+    display: none;
+    margin-right: 8px;
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
 /* toggle button */
 #header-inner > button {
     width: 64px;
