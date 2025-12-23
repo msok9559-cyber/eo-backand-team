@@ -48,11 +48,11 @@ window.addEventListener('load', function () {
     
     // masage
     function addMsg(text, who) {
-        const div = document.createElement('div');
+        const Msg = document.createElement('div');
         
-        div.className = 'msg ' + who; 
-        div.textContent = text;
-        chat.appendChild(div);
+        Msg.className = 'msg ' + who; 
+        Msg.textContent = text;
+        chat.appendChild(Msg);
     }
 
     // chat
