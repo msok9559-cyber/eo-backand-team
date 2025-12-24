@@ -1,15 +1,15 @@
 window.addEventListener("load", function(){
 
-const toggleBtn = document.querySelector('#header > #header-inner > button');
+    const toggleBtn = document.querySelector('#header > #header-inner > button');
 
-const toggleText = toggleBtn.querySelector('span:first-child');
+    const toggleText = toggleBtn.querySelector('span:first-child');
 
-toggleBtn.addEventListener('click', function(){
-    toggleBtn.classList.toggle('on');
-    toggleBtn.classList.toggle('active');
-    document.body.classList.toggle('dark');
+    toggleBtn.addEventListener('click', function(){
+        toggleBtn.classList.toggle('on');
+        toggleBtn.classList.toggle('active');
+        document.body.classList.toggle('dark');
 
-    toggleText.textContent =
-        document.body.classList.contains('dark') ? 'ON' : 'OFF';
-});
+        toggleText.textContent =
+            document.body.classList.contains('dark') ? 'ON' : 'OFF';
+    });
 });
