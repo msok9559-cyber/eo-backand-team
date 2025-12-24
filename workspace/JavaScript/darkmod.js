@@ -1,14 +1,15 @@
-const toggleBtn =
-    document.querySelector('#header > #header-inner > button');
+window.addEventListener("load", function(){
 
-const toggleText =
-    toggleBtn.querySelector('span:first-child');
+const toggleBtn = document.querySelector('#header > #header-inner > button');
 
-toggleBtn.addEventListener('click', () => {
+const toggleText = toggleBtn.querySelector('span:first-child');
+
+toggleBtn.addEventListener('click', function(){
     toggleBtn.classList.toggle('on');
     toggleBtn.classList.toggle('active');
     document.body.classList.toggle('dark');
 
     toggleText.textContent =
         document.body.classList.contains('dark') ? 'ON' : 'OFF';
+});
 });
