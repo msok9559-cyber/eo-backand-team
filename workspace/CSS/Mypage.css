@@ -1,14 +1,14 @@
 /* 메인 콘텐츠 가운데 정렬 */
 #main-id{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 50px;
   margin-top: 50px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#user-info > h1 {
+#user-info > h2 {
   font-size: 50px;
   text-align: center;
   margin-bottom: 20px;
@@ -19,44 +19,24 @@
 #amugona {
   border: 2px solid #0d0e0e;
   border-radius: 8px;
-  padding: 60px;
+  padding: 30px;
   width: 320px;
-  margin: 20px;
+  margin-bottom: 20px;
   background-color: transparent;
 }
 
-#profile-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: arial, sans-serif;
-}
-
 .info-row {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #000000;
   padding-bottom: 20px;
   margin-bottom: 30px;
 }
-#edit-name-btn {
-  padding: 4px 10px;
-  font-size: 13px;
-  background-color: #333435;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#edit-name-btn:hover {
-  background-color: #005fa3;
-}
 
 /* 필드셋 제목 스타일 */
-#amugona fieldset > legend {
+#amugona > legend {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #007acc;
-  margin-bottom: 20px;
+  color: #000000;
+  margin: 20px;
 }
 
 /* 각 줄 정렬 */
@@ -73,26 +53,11 @@
   font-weight: bold;
 }
 
-/* input 넓게 차지 */
-#amugona form > input {
-  width: 80%;
-  padding: 10px;
-  display: inline-block;
-  margin-right: 10px;
-  border: 1px solid #911414;
-  border-radius: 4px;
-}
-
-#amugona > div {
-  display: flex;
-  flex-direction: column;
-}
-
 /* ----------보안----------------------------------------------------------- */
 
 /* 필드셋 전체 스타일 */
 #section-section {
-  width: 380px;
+  width: 320px;
   padding: 30px;
   margin-bottom: 20px;
   border: 2px solid #0d0e0e;
@@ -101,10 +66,10 @@
 }
 
 /* 필드셋 제목 스타일 */
-#section-section > fieldset legend {
+#section-section > legend {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #007acc;
+  color: #0d0e0e;
   margin-bottom: 20px;
 }
 
@@ -122,19 +87,36 @@
   font-weight: bold;
 }
 
-/* input 넓게 차지 */
-#section-section form > div input {
-  width: 80%;
-  padding: 10px;
-  display: inline-block;
-  margin-right: 10px;
-  border: 1px solid #911414;
-  border-radius: 4px;
+/* ----------------------------계정관리----------------------------------- */
+
+#account-actions > h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0c0c0c;
 }
 
-#section-section > div {
+/* 계정 관리 섹션 전체 가운데 정렬 */
+#account-actions {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* 버튼 묶음을 한 줄에 가운데 정렬 */
+#account-actions > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-top: 50px;
+}
+
+/* 버튼 공통 스타일 */
+#account-actions > button {
+  padding: 16px;
+  font-size: 14px;
 }
 
 /* ---------------------------토글 스위치------------------------------- */
@@ -196,6 +178,12 @@
   transition: transform 0.3s ease;
 }
 
+#toggle-group,
+#toggle-group {
+  border-bottom: 2px solid #000000;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
 
 #toggle-group input[type="checkbox"]:checked + #toggle-btn {
   background-color: #4caf50;
@@ -229,37 +217,4 @@
 #toggle-check:focus + #toggle-btn2 {
   outline: 2px solid #007acc;
   outline-offset: 2px;
-}
-
-
-/* ----------------------------계정관리----------------------------------- */
-
-#account-actions > h2 {
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #0c0c0c;
-}
-
-/* 계정 관리 섹션 전체 가운데 정렬 */
-#account-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-/* 버튼 묶음을 한 줄에 가운데 정렬 */
-#account-actions > div {
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* 버튼 사이 간격 */
-  margin-top: 50px;
-}
-
-/* 버튼 공통 스타일 */
-#account-actions > button {
-  padding: 16px;
-  font-size: 14px;
 }
