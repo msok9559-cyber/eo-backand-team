@@ -1,86 +1,84 @@
-/* ================= 마이페이지 ================= */
 
 #main-id {
-  max-width: 720px;
-  margin: 120px auto;
-  padding: 60px;
-  border-radius: 16px;
-  background-color: #ffffff;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+	max-width: 720px;
+	margin: 120px auto;
+	padding: 60px;
+	border-radius: 16px;
+	background-color: #ffffff;
+	box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* 섹션 제목 */
 #user-info > h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 30px;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 30px;
 }
 
 /* 정보 한 줄 */
 .info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-  border-bottom: 1px solid #e5e7eb;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 0;
+	border-bottom: 1px solid #e5e7eb;
 }
 
 .info-row:last-child {
-  border-bottom: none;
+  	border-bottom: none;
 }
 
 /* 라벨 */
 .name-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
+	font-size: 14px;
+	font-weight: 600;
+	color: #374151;
 }
 
 /* 값 */
 .name-value {
-  font-size: 14px;
-  color: #6b7280;
+	font-size: 14px;
+	color: #6b7280;
 }
 
 .btn-wrap{
-  display: flex;
-  justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .btn-danger {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 36px;
-  border-radius: 999px;
-  background-color: #2563eb;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 14px 36px;
+	border-radius: 999px;
+	background-color: #2563eb;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-danger:hover {
-  background-color: #1e40af;
-  transform: translateY(-2px);
+	background-color: #1e40af;
+	transform: translateY(-2px);
 }
 
 #toggle-group,
 #toggle-group2 {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  line-height: 1.6;
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	line-height: 1.6;
 }
 
-#toggle-group > span,
-#toggle-group2 > span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+.toggle-btn > span{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
 }
 
 /* 토글 버튼 바 */

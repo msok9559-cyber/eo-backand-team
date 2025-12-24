@@ -4,67 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내 정보</title>
-    <link rel="stylesheet" href="../CSS/CGreset.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/Mypage.css">
+	<link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+	<header id="header">
+		<div id="header-inner">
+			<a href="#home" id="logo">JDJS</a>
 
-<main id="main-id">
-	<!-- 회원정보 -->
-	<div id="user-info">
-		<h2>회원 정보</h2>    		
-		<div class="info-row">
-			<span class="name-label">이름</span> 
-			<span class="name-value">정XX</span>           
+			<nav id="nav">
+				<ul>
+					<li><a href="#">AI 도구</a></li>
+					<li><a href="#">기능</a></li>
+					<li><a href="#">소개</a></li>
+					<li><a href="#">MOD</a></li>
+				</ul>
+			</nav>
+			
+			<button>
+				<span>OFF</span>
+				<span></span>
+			</button>
+			
+			<a href="./members/login.html" id="login-btn">Log out</a>
 		</div>
+	</header>
 
-		<div class="info-row">
-			<span class="name-label">별명</span> 
-			<span class="name-value">홍XX</span>           
+	<main id="main-id">
+		<!-- 회원정보 -->
+		<div id="user-info">
+			<h2>회원 정보</h2>    		
+			<div class="info-row">
+				<span class="name-label">이름</span> 
+				<span class="name-value">정XX</span>           
+			</div>
+
+			<div class="info-row">
+				<span class="name-label">별명</span> 
+				<span class="name-value">홍XX</span>           
+			</div>
+				
+			<div class="info-row">
+				<span class="name-label">핸드폰</span> 
+				<span class="name-value">010-xxxx-xxxx</span>           
+			</div>
+				
+			<div class="info-row">
+				<span class="name-label">E-mail</span> 
+				<span class="name-value">jhxxxxx@xxxxx.com</span>           
+			</div>
+			<div class="btn-wrap">
+				<a href="./datapage.html" class="btn-danger">정보 수정</a>
+			</div>
 		</div>
+		<div>
+			<h2>보안정보</h2>          
+			<div class="info-row">
+				<span class="name-label">아이디</span> 
+				<span class="name-value">jxxxxxx</span>           
+			</div>
 			
-		<div class="info-row">
-			<span class="name-label">핸드폰</span> 
-			<span class="name-value">010-xxxx-xxxx</span>           
-		</div>
+			<div class="info-row">
+				<span class="name-label">비밀번호</span> 
+				<span class="name-value">xxxxxxxxxxxx</span>           
+			</div>
+						
+			<div id="toggle-group">
+				<label>해외 로그인 차단</label>
+				<button class="toggle-btn" type="button">
+					<span>해외로그인차단</span>
+				</button>	
+			</div>
 			
-		<div class="info-row">
-			<span class="name-label">E-mail</span> 
-			<span class="name-value">jhxxxxx@xxxxx.com</span>           
+			<div id="toggle-group2">
+				<label>타지역 로그인 차단</label>
+				<button class="toggle-btn" type="button">
+					<span>타지역로그인차단</span>
+				</button>
+			</div>               
 		</div>
-		<div class="btn-wrap">
-			<a href="./datapage.html" class="btn-danger">정보 수정</a>
-		</div>
-	</div>
-	<div>
-		<h2>보안정보</h2>          
-		<div class="info-row">
-			<span class="name-label">아이디</span> 
-			<span class="name-value">jxxxxxx</span>           
-		</div>
-		
-		<div class="info-row">
-			<span class="name-label">비밀번호</span> 
-			<span class="name-value">xxxxxxxxxxxx</span>           
-		</div>
-					
-		<div id="toggle-group">
-			<label for="toggle-check">해외 로그인 차단</label>
-			<button class="toggle-btn" type="button">
-            	<span></span>
-        	</button>	
-		</div>
-		
-		<div id="toggle-group2">
-			<label for="toggle2-check">타지역 로그인 차단</label>
-			<button class="toggle-btn" type="button">
-            	<span></span>
-        	</button>
-		</div>
-		<div class="btn-wrap">
-			<a href="./passwordmodify.html" class="btn-danger">정보 수정</a>
-		</div>                   
-	</div>
-</main>
+	</main>
 </body>
 </html>
