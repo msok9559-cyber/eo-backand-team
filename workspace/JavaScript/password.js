@@ -125,5 +125,6 @@ window.addEventListener('load', function () {
     // 재설정 버튼
     pwButton.addEventListener('click', function () {
         window.alert('비밀번호가 재설정 되었습니다');
+        location.href = "../members/login.html";
     });
 });
