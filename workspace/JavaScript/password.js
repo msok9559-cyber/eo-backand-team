@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
     // 인증번호 발송
     sendButton.addEventListener('click', function () {
 
-        //아이디와 이메일 형식이 맞지 않을경
+        //아이디와 이메일 형식이 맞지 않을경우
         if (!emailRegex.test(userIdInput.value)) {
             window.alert("아이디가 올바르지 않습니다.");
             emailInput.focus();
