@@ -1,93 +1,70 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>내 정보</title>
-  <link rel="stylesheet" href="../CSS/CGreset.css">
-  <link rel="stylesheet" href="../CSS/Mypage.css">
-  <link rel="stylesheet" href="../JavaScript/mypage.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 정보</title>
+    <link rel="stylesheet" href="../CSS/CGreset.css">
+    <link rel="stylesheet" href="../CSS/Mypage.css">
 </head>
 <body>
 
-  <main id="main-id">
-    <!-- 회원정보 -->
-    <section id="user-info">
-      <h1>회원 정보</h1>
-      <div>
-        <form method="post" action="/server/program">      
-          
-          <fieldset id="amugona">
-            <legend>기본정보</legend>        
-            <div>
-              
-              <div id="name-row" class="info-row">
-                <span id="name-label">이름</span> 
-                <span id="name-value">정XX</span>           
-              </div>
-              
-            <div id="name-row" class="info-row">
-              <span id="name-label">핸드폰</span> 
-              <span id="name-value">010-xxxx-xxxx</span>           
-            </div>
-            
-            <div id="name-row" class="info-row">
-              <span id="name-label">E-mail</span> 
-              <span id="name-value">jhxxxxx@xxxxx.com</span>           
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-    
-    
-    <section>
-      <form method="post" action="/server/program">
-        
-        <fieldset id="section-section">
-          <legend>보안</legend>          
-          <div>
-            
-            <div id="name-row" class="info-row">
-              <span id="name-label">아이디</span> 
-              <span id="name-value">jxxxxxx</span>           
-            </div>
-            
-            <div id="name-row" class="info-row">
-              <span id="name-label">비밀번호</span> 
-              <span id="name-value">xxxxxxxxxxxx</span>           
-            </div>
-                        
-            <div id="toggle-group">
-              <label for="toggle-check">해외 로그인 차단</label>
-              <input type="checkbox" id="toggle-check">
-              <label for="toggle-check" id="toggle-btn"></label>
-            </div>
-            
-            <div id="toggle-group2">
-              <label for="toggle2-check">타지역 로그인 차단</label>
-              <input type="checkbox" id="toggle2-check">
-              <label for="toggle2-check" id="toggle-btn2"></label>
-            </div>                   
-            
-          </div>
-        </fieldset>
-      </form>
-    </section>
-    
-    <section id="account-actions">
-      <h2>계정 관리</h2>
-      <form method="post" action="/withdraw">
-        <fieldset>
-          <div>
-            <button type="submit" class="btn danger">회원수정</button>
-            <button type="submit" class="btn danger">회원탈퇴</button>
-          </div>
-          
+<main id="main-id">
+	<!-- 회원정보 -->
+	<div id="user-info">
+		<h2>회원 정보</h2>    		
+		<div class="info-row">
+			<span class="name-label">이름</span> 
+			<span class="name-value">정XX</span>           
+		</div>
 
-        </fieldset>
-      </form>
-    </section>  
-  </main>
+		<div class="info-row">
+			<span class="name-label">별명</span> 
+			<span class="name-value">홍XX</span>           
+		</div>
+			
+		<div class="info-row">
+			<span class="name-label">핸드폰</span> 
+			<span class="name-value">010-xxxx-xxxx</span>           
+		</div>
+			
+		<div class="info-row">
+			<span class="name-label">E-mail</span> 
+			<span class="name-value">jhxxxxx@xxxxx.com</span>           
+		</div>
+		<div class="btn-wrap">
+			<a href="./datapage.html" class="btn-danger">정보 수정</a>
+		</div>
+	</div>
+	<div>
+		<h2>보안정보</h2>          
+		<div class="info-row">
+			<span class="name-label">아이디</span> 
+			<span class="name-value">jxxxxxx</span>           
+		</div>
+		
+		<div class="info-row">
+			<span class="name-label">비밀번호</span> 
+			<span class="name-value">xxxxxxxxxxxx</span>           
+		</div>
+					
+		<div id="toggle-group">
+			<label for="toggle-check">해외 로그인 차단</label>
+			<button>
+            	<span>-</span>
+        	</button>	
+		</div>
+		
+		<div id="toggle-group2">
+			<label for="toggle2-check">타지역 로그인 차단</label>
+			<button>
+            	<span>-</span>
+        	</button>
+		</div>
+		<div class="btn-wrap">
+			<a href="./passwordmodify.html" class="btn-danger">정보 수정</a>
+		</div>                   
+	</div>
+</main>
 </body>
 </html>
