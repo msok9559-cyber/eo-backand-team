@@ -53,14 +53,15 @@
 }
 /* toggle button */
 #header-inner > button {
+    border: none;
+    padding: 0;
+    background: none;
     width: 64px;
     height: 28px;
     background-color: #e5e7eb;
-    border: none;
     border-radius: 999px;
     position: relative;
     cursor: pointer;
-    padding: 0;
     margin-left: 8px;
     margin-right: 8px;
     transition: background-color 0.3s;
@@ -92,7 +93,7 @@
     transition: transform 0.3s ease;
 }
 
-/* ===== 다크모드 ON ===== */
+/*다크모드 ON*/
 
 #header-inner > button.active {
     background-color: #374151;
@@ -183,6 +184,7 @@
     opacity: 0.9;
     pointer-events: none;
 }
+
 #tool-list > article:nth-child(1)::before { content: "🔍"; }
 #tool-list > article:nth-child(2)::before { content: "🎨"; }
 #tool-list > article:nth-child(3)::before { content: "📄"; }
@@ -251,6 +253,7 @@
     opacity: 0.9;
     pointer-events: none;
 }
+
 #feature-list > article:nth-child(1)::before {content: "🎯";}
 #feature-list > article:nth-child(2)::before {content: "⚡";}
 #feature-list > article:nth-child(3)::before {content: "🌐";}
@@ -303,20 +306,20 @@
 
 /* ===== Dark Mode (Light Dark) ===== */
 
-body.dark #header {
+body.dark > #header {
     background-color: #1f1f1f;
     border-bottom: 1px solid #3a3a3a;
 }
 
-body.dark #logo {
+body.dark > #logo {
     color: #ffffff;
 }
 
-body.dark #nav > ul > li > a {
+body.dark > #nav > ul > li > a {
     color: #f1f1f1;
 }
 
-body.dark #header > #header-inner > #login-btn {
+body.dark >#login-btn {
     background-color: #3a3a3a;
     color: #ffffff;
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수정페이지</title>
+  <link rel="stylesheet" href="../CSS/reset.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/datapage.css">
+</head>
+<body>
+<header id="header">
+	<div id="header-inner">
+		<a href="../index.html" id="logo">JDJS</a>
+
+		<nav id="nav">
+			<ul>
+				<li><a href="#">AI 도구</a></li>
+				<li><a href="#">기능</a></li>
+				<li><a href="#">소개</a></li>
+				<li><a href="#">MOD</a></li>
+			</ul>
+		</nav>
+		
+		<button>
+			<span>OFF</span>
+			<span></span>
+		</button>
+
+		<a href="../index.html" id="login-btn">Log Out</a>
+	</div>
+</header>
+
+<main id="correction-id">
+	<!-- 회원정보 -->
+  	<section id="user-info">
+		<h2>수정 페이지</h2>
+		<form method="post" action="/server/program">           
+			<div id="form-box">
+				<div class="info-row">
+					<label>별명</label>
+					<span class="name-value">홍xx</span>
+					<input type="email" name="email" placeholder="새 별명">            
+				</div>
+
+				<div class="info-row">
+					<label>E-mail</label>
+					<span class="name-value">jhxxxxx@xxxxx.com</span>
+					<input type="email" name="email" placeholder="새 E-mail">         
+				</div>
+
+				<div class="info-row">
+					<label>휴대전화</label>
+					<span class="name-value">010-xxxx-xxxx</span> 
+					<input type="tel" name="phone" placeholder="새 휴대전화">       
+				</div>
+			</div>
+		</form>
+  	</section>
+
+    <div id="account-actions">
+		<form method="post" action="/withdraw">
+			<fieldset>
+				<div id="btn-danger">
+					<a href="../index.html">회원수정 완료</a>
+				</div>
+			</fieldset>
+		</form>
+    </div>  
+</main>
+</body>
+</html>

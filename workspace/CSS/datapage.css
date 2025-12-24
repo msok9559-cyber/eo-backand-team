@@ -1,0 +1,78 @@
+
+#correction-id {
+  width: 400px;
+  margin: 120px auto;
+  padding: 60px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* 제목 */
+#user-info > h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+
+/* 정보 한 줄 */
+.info-row {
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row > label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.name-value {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.info-row{
+  display: flex;
+  flex-direction: column;
+}
+
+/* 입력창 */
+.info-row > input {
+  width: 70%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+/* 버튼 영역 */
+#account-actions {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#btn-danger > a {
+  padding: 14px 40px;
+  border-radius: 999px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#btn-danger > a:hover {
+  background-color: #1e40af;
+}

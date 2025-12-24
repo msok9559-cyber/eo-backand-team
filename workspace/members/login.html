@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>로그인페이지</title>
-    <script src="../JavaScript/login.js"></script>
     <link rel="stylesheet" href="../CSS/CGreset.css">
     <link rel="stylesheet" href="../CSS/Login.css">
+    <script src="../JavaScript/login.js"></script>
 
 </head>
 <body>
     
 <main id="main-tool">
-    <div id="site-title">JDJS</div>
-    
-        <div id="profile">
-
-        <div id="login-box">
-            <h1>로그인</h1>
-            <input type="text" id="loginId" placeholder="아이디">
-            <input type="password" id="loginPw" placeholder="비밀번호">
-            <button id="loginBtn">로그인</button>
-        
-            <hr>
-        
+    <h1>JDJS</h1>
+    <div id="profile">
+        <form id="login-box" action="../index.html" method="post">
+            <h2>로그인</h2>
+            <input type="text" id="loginId" placeholder="아이디" autocomplete="off">
+            <input type="password" id="loginPw" placeholder="비밀번호" autocomplete="off">
+            <button id="loginBtn" type="submit">로그인</button>
+        </form>
+        <div id="box">
             <a href="#">ID 찾기</a>
             <a href="#">P/W 찾기</a>
             <a href="#">회원가입</a>
-            
         </div>
-    </div>
-        
-        
+    </div>    
+
     <div id="banner-section">
         <img src="../Images/banner.jpg" alt="banner">
     </div>

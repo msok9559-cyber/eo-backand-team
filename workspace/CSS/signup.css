@@ -109,7 +109,7 @@
 }
 
 /* 회원가입 버튼 */
-.btn-start {
+#btn-start {
     margin-top: 20px;
     padding: 14px;
     border-radius: 8px;
