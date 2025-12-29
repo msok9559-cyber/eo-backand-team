@@ -4,7 +4,8 @@ window.addEventListener("load", function () {
     const loginPw = document.getElementById("loginPw");
     const loginBtn = document.getElementById("loginBtn");
 
-    loginBtn.addEventListener("click", function () {
+    loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
         const id = loginId.value;
         const pw = loginPw.value;
 
@@ -22,5 +23,6 @@ window.addEventListener("load", function () {
             alert("아이디 또는 비밀번호가 틀렸습니다.");
         }
     });
+    
 
 });
