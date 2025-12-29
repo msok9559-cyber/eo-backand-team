@@ -83,13 +83,15 @@
 
 /* 토글 버튼 바 */
 .toggle-btn {
-    width: 54px;
-    height: 28px;
     padding: 0;
     border: none;
+	background: none;
+    cursor: pointer;
+
+    width: 54px;
+    height: 28px;
     border-radius: 28px;
     background-color: #dcdcdc;
-    cursor: pointer;
     position: relative;
     transition: background-color 0.3s ease;
 }
