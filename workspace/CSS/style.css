@@ -243,16 +243,16 @@ body.dark #hero > p {
 }
 
 /* Tools */
-body.dark #tools {
+body.dark #tools-inner {
     background-color: #1f1f1f;
 }
 
-body.dark #tools > #tools-inner > #tool-list > article {
+body.dark #tools-inner > #tool-list > article {
     background-color: #2a2a2a;
     border: 1px solid #3a3a3a;
 }
 
-body.dark #tools > #tools-inner > #tool-list > article > p {
+body.dark #tools-inner > #tool-list > article > p {
     color: #c7c7c7;
 }
 
