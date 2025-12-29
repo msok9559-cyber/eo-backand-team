@@ -6,4 +6,13 @@ window.addEventListener('load', function () {
 
         location.href = "./mypage.html"
     });
+
+    document.getElementById("login-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // 로그인 정보 삭제
+        localStorage.removeItem("loginUser");
+
+        location.href = "./login.html";
+    });
 });

@@ -1,6 +1,7 @@
 window.addEventListener("load", function () {
     // 토글 버튼 기능
     const toggleButtons = document.querySelectorAll(".toggle-btn");
+    
     toggleButtons.forEach(function(btn){
         btn.addEventListener("click", function () {
             this.classList.toggle("on");
@@ -36,4 +37,13 @@ window.addEventListener("load", function () {
     userEmailSpan.textContent = currentUser.email || "-"; // 이메일 표시
     userIdSpan.textContent = currentUser.id || "-";
     userPwSpan.textContent = "*******";
+
+    document.getElementById("login-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // 로그인 정보 삭제
+        localStorage.removeItem("loginUser");
+
+        location.href = "./login.html";
+    });
 });

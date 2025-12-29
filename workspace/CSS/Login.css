@@ -7,13 +7,16 @@
     box-sizing: border-box;
 }
 
-#main-tool > a {
+#main-tool > h1 {
+	margin: 25px;
+}
+
+#main-tool > h1 > a {
 	text-decoration: none;
 	color: black;
 	text-align: center;
 	font-size: 60px;
 	font-weight: bold;
-	margin: 25px;
 }
 
 #profile {

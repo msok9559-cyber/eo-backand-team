@@ -124,4 +124,13 @@ window.addEventListener('load', function () {
         }
     });
 
+    // 로그아웃 location 
+    document.getElementById("logout").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // 로그인 정보 삭제
+        localStorage.removeItem("loginUser");
+
+        location.href = "./login.html";
+    });
 });

@@ -47,48 +47,6 @@
     border-radius: 4px;
     font-size: 14px;
 }
-/* 
-toggle button
-#header-inner > button {
-    border: none;
-    padding: 0;
-    background: none;
-    width: 64px;
-    height: 28px;
-    background-color: #e5e7eb;
-    border-radius: 999px;
-    position: relative;
-    cursor: pointer;
-    margin-left: 8px;
-    margin-right: 8px;
-    transition: background-color 0.3s;
-}
-
-OFF / ON 텍스트
-#header-inner > button > span:first-child {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 11px;
-    font-weight: bold;
-    color: #374151;
-    pointer-events: none;
-    z-index: 3; 
-}
-
-동그라미
-#header-inner > button > span:last-child {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    z-index: 1;
-    transition: transform 0.3s ease;
-} */
 
 #toggle-btn > span{
 	position: absolute;
