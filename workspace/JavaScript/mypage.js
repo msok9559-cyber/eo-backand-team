@@ -24,10 +24,16 @@ window.addEventListener("load", function () {
         return;
     }
 
-    // 화면에 정보 표시
-    document.getElementById("userName").textContent = currentUser.name || "-";
-    document.getElementById("userPhone").textContent = currentUser.phone || "-";
-    document.getElementById("userEmail").textContent = currentUser.email || "-";
-    document.getElementById("userId").textContent = currentUser.id || "-";
-    document.getElementById("userPw").textContent = "*******"; // 비밀번호는 항상 가림
+        // 화면에 정보 표시
+    const userNameSpan = document.getElementById("userName");
+    const userPhoneSpan = document.getElementById("userPhone");
+    const userEmailSpan = document.getElementById("userEmail");
+    const userIdSpan = document.getElementById("userId");
+    const userPwSpan = document.getElementById("userPw");
+
+    userNameSpan.textContent = currentUser.name || "-";
+    userPhoneSpan.textContent = currentUser.phone || "-";
+    userEmailSpan.textContent = currentUser.email || "-"; // 이메일 표시
+    userIdSpan.textContent = currentUser.id || "-";
+    userPwSpan.textContent = "*******";
 });

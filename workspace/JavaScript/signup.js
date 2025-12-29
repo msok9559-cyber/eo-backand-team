@@ -10,6 +10,9 @@ window.addEventListener("load", function(){
     const nameInput = document.getElementById("userName");
     const phoneInput = document.getElementById("phone");
 
+    const emailInput = document.querySelector("#emailId > input");
+    const emailSelect = document.querySelector("#emailId > select");
+
     const allClick = document.getElementById("allclick");
     const termItems = document.querySelectorAll(".term-item");
 
@@ -142,12 +145,16 @@ window.addEventListener("load", function(){
 
         // Error 뜨면 막기
         if (submitError()) return;
+
+        const email = emailInput.value + "@" + emailSelect.value;
         
         const newUser = {
             id: userId.value,
             password: pw.value,
             name: nameInput.value,
-            phone: phoneInput.value
+            phone: phoneInput.value,
+            email: email
+
         };
         
         users.push(newUser);
