@@ -20,17 +20,23 @@ window.addEventListener("load", function(){
     const completeButton = document.querySelector("#complete > button");
 
     const form = document.getElementById('auth-form');
-    const submitBtn = document.getElementById("btn-start");
 
     let isCertified = false;
+    let isIdChecked = false;
 
     // 휴대폰 번호 정규식
-    const phoneRegex = /^[0-9]+$/;
+    const phoneRegex = /^[0-9]{11}$/;
     const CODE = "485275";
 
     /* 아이디 중복 */
     idCheckBtn.addEventListener("click", function () {
-        if (!userId.value) return;
+        if (!userId.value) {
+            idMessage.style.display = "block";
+            idMessage.textContent = "아이디를 입력해주세요.";
+            idMessage.style.color = "red";
+            isIdChecked = false;
+            return;
+        }
 
         idMessage.style.display = "block";
         if (usedIds.includes(userId.value)) {
@@ -41,11 +47,13 @@ window.addEventListener("load", function(){
             idMessage.style.color = "green";
         }
 
+        isIdChecked = true;
         hasError();
     });
 
     userId.addEventListener("input", function () {
         idMessage.style.display = "none";
+        isIdChecked = false;
     });
 
     /* 비밀번호 확인 */
@@ -73,7 +81,7 @@ window.addEventListener("load", function(){
         return phoneRegex.test(value);
     }
 
-    // 휴대폰 인증번호
+    // 휴대폰 인증 번호
     certButton.addEventListener('click', function () {
         if (!isValidPhone(certInput.value)) {
             window.alert("휴대폰 번호를 숫자 11자리로 입력해주세요.");
@@ -82,7 +90,7 @@ window.addEventListener("load", function(){
         }
 
         completeInput.value = CODE;
-        alert(`인증번호가 발송되었습니다.\n인증번호는 ${CODE} 입니다.`);
+        alert(`인증 번호가 발송되었습니다.\n인증 번호는 ${CODE} 입니다.`);
     });
 
     // 휴대폰 번호 바뀌면 무효 처
@@ -96,7 +104,7 @@ window.addEventListener("load", function(){
         certMessage.style.display = 'block';
 
         if (completeInput.value !== CODE) {
-            certMessage.textContent = "인증번호가 맞지 않습니다.";
+            certMessage.textContent = "인증 번호가 맞지 않습니다.";
             certMessage.style.color = "red";
             completeInput.focus();
 
@@ -104,7 +112,7 @@ window.addEventListener("load", function(){
             return;
         }
 
-        certMessage.textContent = "인증확인 되었습니다.";
+        certMessage.textContent = "인증 확인 되었습니다.";
         certMessage.style.color = "green";
 
         isCertified = true; 
@@ -126,18 +134,19 @@ window.addEventListener("load", function(){
 
     // 회원가입
     form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
         // Error 뜨면 막기
         if (submitError()) {
-            event.preventDefault();
             return;
         }
 
         event.preventDefault();
-        alert("회원가입이 완료되었습니다");
-        // window.location.href = "login.html";
+        alert("회원 가입이 완료되었습니다");
+        window.location.href = "login.html";
     });
 
-    //오류메세지 있을경우 서브밋버튼 막기
+    //오류메세지 있을 경우 서브밋 버튼 막기
     function submitError() {
         if (hasError()) {
             window.alert("입력한 정보를 다시 확인해주세요.");
@@ -149,10 +158,15 @@ window.addEventListener("load", function(){
 
     // 분리해서 써야 오류가 안생김
     function hasError() {
-        const isError = (idMessage.style.display === "block" && idMessage.style.color === "red") ||
-                        (pwMessage.style.display === "block" && pwMessage.style.color === "red") ||
-                        (certMessage.style.display === "block" && certMessage.style.color === "red");
-                        (isCertified === false);
-        return isError;
+        const idError =
+        (idMessage.style.display === "block" && idMessage.style.color === "red"); 
+
+        const pwError =
+            (pwMessage.style.display === "block" && pwMessage.style.color === "red");  
+
+        const certError =
+            (certMessage.style.display === "block" && certMessage.style.color === "red"); 
+
+        return idError || pwError || certError || !isCertified || !isIdChecked;  
     }
 });
