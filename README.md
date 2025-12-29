@@ -14,7 +14,7 @@
 **AI 기반 포털 사이트 화면 설계**를 목표로 합니다.
 
 ### 📌 구현 페이지
-- 메인 페이지 🔍  
+- 메인 페이지 🔍  (file:///C:/workspace/eo-backand-team/workspace/index.html)
 - 질문 결과 페이지 💬  
 - 회원 로그인 페이지 🔐  
 - 회원 가입 페이지 📝  
@@ -63,20 +63,31 @@
 ```
 project
 ┣ CSS
-┃ ┣ reset.css
-┃ ┣ style.css
-┃ ┣ signup.css
-┃ ┣ project-style.css
 ┃ ┣ effect.css
-┃ ┗ password.css
+┃ ┣ login.css
+┃ ┣ mypage.css
+┃ ┣ nav.css
+┃ ┣ password.css
+┃ ┣ question.css
+┃ ┣ reset.css
+┃ ┣ revise.css
+┃ ┣ signup.css
+┃ ┗ style.css
 ┣ JavaScript
 ┃ ┣ darkmod.js
+┃ ┣ index.js
+┃ ┣ login.js
+┃ ┣ mypage.js
 ┃ ┣ password.js
-┃ ┣ project-java.js
+┃ ┣ question.js
+┃ ┣ revise.js
 ┃ ┗ signup.js
 ┣ members
 ┃ ┣ login.html
+┃ ┣ mypage.html
 ┃ ┣ password.html
+┃ ┣ question.html
+┃ ┣ revise.html
 ┃ ┗ signup.html
 ┗ index.html
 ```
