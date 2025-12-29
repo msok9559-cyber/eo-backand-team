@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/mypage.css">
 	<link rel="stylesheet" href="../CSS/nav.css">
+	<script src="../JavaScript/login.js"></script>
+	<script src="../JavaScript/mypage.js"></script>
+	<script src="./JavaScript/darkmod.js"></script>
 </head>
 <body>
 	<header id="header">
@@ -18,16 +21,15 @@
 					<li><a href="#">AI 도구</a></li>
 					<li><a href="#">기능</a></li>
 					<li><a href="#">소개</a></li>
-					<li><a href="#">MOD</a></li>
+					<li>MOD</li>
 				</ul>
 			</nav>
 			
-			<button>
-				<span>OFF</span>
-				<span></span>
+			<button id="toggle-btn">
+				<span>다크 모드</span>
 			</button>
 			
-			<a href="../index.html" id="login-btn">Log out</a>
+			<a href="./login.html" id="login-btn">Log out</a>
 		</div>
 	</header>
 
@@ -37,50 +39,50 @@
 			<h2>회원 정보</h2>    		
 			<div class="info-row">
 				<span class="name-label">이름</span> 
-				<span class="name-value">정XX</span>           
+				<span class="name-value" id="userName">-</span>           
 			</div>
 
 			<div class="info-row">
-				<span class="name-label">별명</span> 
-				<span class="name-value">홍XX</span>           
-			</div>
-				
-			<div class="info-row">
 				<span class="name-label">핸드폰</span> 
-				<span class="name-value">010-xxxx-xxxx</span>           
+				<span class="name-value" id="userPhone">-</span>           
 			</div>
 				
 			<div class="info-row">
 				<span class="name-label">E-mail</span> 
-				<span class="name-value">jhxxxxx@xxxxx.com</span>           
+				<span class="name-value" id="userEmail">-</span>           
 			</div>
+
 			<div class="btn-wrap">
 				<a href="./revise.html" class="btn-danger">정보 수정</a>
 			</div>
 		</div>
+
 		<div>
-			<h2>보안정보</h2>          
+			<h2>보안 정보</h2>
+
 			<div class="info-row">
 				<span class="name-label">아이디</span> 
-				<span class="name-value">jxxxxxx</span>           
+				<span class="name-value" id="userId">-</span>           
 			</div>
 			
 			<div class="info-row">
 				<span class="name-label">비밀번호</span> 
-				<span class="name-value">xxxxxxxxxxxx</span>           
+				<span class="name-value" id="userPw">*********</span>           
 			</div>
 						
 			<div id="toggle-group">
-				<label>해외 로그인 차단</label>
-				<button class="toggle-btn" type="button">
-					<span>해외로그인차단</span>
+				<p>해외 로그인 차단</p>
+
+				<button class="toggle-btn on" type="button">
+					<span>해외 로그인 차단</span>
 				</button>	
 			</div>
 			
 			<div id="toggle-group2">
-				<label>타지역 로그인 차단</label>
-				<button class="toggle-btn" type="button">
-					<span>타지역로그인차단</span>
+				<p>타지역 로그인 차단</p>
+
+				<button class="toggle-btn on" type="button">
+					<span>타지역 로그인 차단</span>
 				</button>
 			</div>               
 		</div>

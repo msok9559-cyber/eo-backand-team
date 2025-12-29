@@ -5,175 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Portal</title>
     <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/effect.css">
     <script src="./JavaScript/index.js"></script>
     <script src="./JavaScript/darkmod.js"></script>
 </head>
 <body>
+    <header id="header">
+        <div id="header-inner">
+            <a href="./index.html" id="logo">JDJS</a>
 
-<header id="header">
-    <div id="header-inner">
-        <a href="#home" id="logo">JDJS</a>
-
-        <nav id="nav">
-            <ul>
-                <li><a href="#">AI 도구</a></li>
-                <li><a href="#">기능</a></li>
-                <li><a href="#">소개</a></li>
-                <li><a href="#">MOD</a></li>
-            </ul>
-        </nav>
-        
-        <button>
-            <span>OFF</span>
-            <span></span>
-        </button>
-
-        <a href="./members/mypage.html" id="mypage-btn">MyPage</a>
-        <a href="./members/login.html" id="login-btn">Log In</a>
-    </div>
-</header>
-
-<main>
-
-<section id="hero">
-    <p>차세대 AI 플랫폼</p>
-    <h2>
-        AI로 만드는 <br>
-        <span>스마트한 미래</span>
-    </h2>
-    <p>
-        최신 AI 기술을 활용한 다양한 도구와 서비스를 한 곳에서 경험해보세요.
-    </p>
-</section>
-
-<section id="tools">
-    <div id="tools-inner">
-        <h3>강력한 AI 도구</h3>
-        <p>다양한 분야에서 활용 가능한 최첨단 AI 도구를 만나보세요</p>
-
-        <div id="tool-list">
-
-            <article id="search">
-                <h4><a href="./members/question.html">검색창</a></h4>
-                <p>무엇이든 검색하세요!</p>
-            </article>
-
-
-            <article>
-                <h4>이미지 생성</h4>
-                <p>텍스트 기반 이미지 생성</p>
-            </article>
-
-
-
-            <article>
-                <h4>문서 요약</h4>
-                <p>긴 문서를 빠르게 요약</p>
-            </article>
-
-
-            <article>
-                <h4>음성 인식</h4>
-                <p>음성을 텍스트로 변환</p>
-            </article>
-
-            <article>
-                <h4>비디오 편집</h4>
-                <p>AI기반 영상 편집</p>
-            </article>
-
-           <article>
-                <h4>번역</h4>
-                <p>다국어 번역 서비스</p>
-           </article>
-
-           <article>
-                <h4>코드 어시스 턴트</h4>
-                <p>개발자를 위한 코드 지원</p>
-           </article>
-
-           <article>
-                <h4>자동화 도구</h4>
-                <p>반복 작업 자동화</p>
-           </article>
-
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">AI 도구</a></li>
+                    <li><a href="#">기능</a></li>
+                    <li><a href="#">소개</a></li>
+                    <li>MOD</li>
+                </ul>
+            </nav>
+                
+            <button id="toggle-btn">
+                <span>다크 모드</span>
+            </button>
+            
+            <a href="./members/mypage.html" id="mypage-btn">My Page</a>
+            <a href="./members/login.html" id="login-btn">Log In</a>
         </div>
-    </div>
-</section>
+    </header>
 
-<section id="why">
-    <h3>왜 AI Portal을 선택해야 할까요?</h3>
-    <p>사용자 중심의 강력한 AI 플랫폼을 제공합니다</p>
+    <main>
+        <section id="hero">
+            <p>차세대 AI 플랫폼</p>
+            <h2>
+                AI로 만드는 <br>
+                <span>스마트한 미래</span>
+            </h2>
+            <p>
+                최신 AI 기술을 활용한 다양한 도구와 서비스를 한 곳에서 경험해보세요.
+            </p>
+        </section>
 
-    <div id="feature-list">
-        <article>
-            <h4>높은 정확도</h4>
-            <p>신뢰도 높은 AI 결과</p>
-        </article>
+        <section id="tools-inner">
+            <h3>강력한 AI 도구</h3>
+            <p>다양한 분야에서 활용 가능한 최첨단 AI 도구를 만나보세요</p>
 
-        <article>
-            <h4>실시간 처리</h4>
-            <p>빠르고 안정적인 응답</p>
-        </article>
+            <div id="tool-list">
+                <article id="search">
+                    <h4><a href="./members/question.html">검색창</a></h4>
+                    <p>무엇이든 검색하세요!</p>
+                </article>
 
-        <article>
-            <h4>글로벌 서비스</h4>
-            <p>전 세계 사용자 지원</p>
-        </article>
-    </div>
-</section>
 
-</main>
+                <article>
+                    <h4>이미지 생성</h4>
+                    <p>텍스트 기반 이미지 생성</p>
+                </article>
 
-<footer id="footer">
-    <div id="footer-inner">
-        <div>
-            <h4>AI Portal</h4>
-            <p>2팀의 집단지성이 들어간 작업입니다.</p>
+
+                <article>
+                    <h4>문서 요약</h4>
+                    <p>긴 문서를 빠르게 요약</p>
+                </article>
+
+
+                <article>
+                    <h4>음성 인식</h4>
+                    <p>음성을 텍스트로 변환</p>
+                </article>
+
+                <article>
+                    <h4>비디오 편집</h4>
+                    <p>AI 기반 영상 편집</p>
+                </article>
+
+                <article>
+                        <h4>번역</h4>
+                        <p>다국어 번역 서비스</p>
+                </article>
+
+                <article>
+                        <h4>코드 어시스턴트</h4>
+                        <p>개발자를 위한 코드 지원</p>
+                </article>
+
+                <article>
+                        <h4>자동화 도구</h4>
+                        <p>반복 작업 자동화</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="why">
+            <h3>왜 AI Portal을 선택해야 할까요?</h3>
+            <p>사용자 중심의 강력한 AI 플랫폼을 제공합니다</p>
+
+            <div id="feature-list">
+                <article>
+                    <h4>높은 정확도</h4>
+                    <p>신뢰도 높은 AI 결과</p>
+                </article>
+
+                <article>
+                    <h4>실시간 처리</h4>
+                    <p>빠르고 안정적인 응답</p>
+                </article>
+
+                <article>
+                    <h4>글로벌 서비스</h4>
+                    <p>전 세계 사용자 지원</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div id="footer-inner">
+            <div>
+                <h4>AI Portal</h4>
+                <p>2팀의 집단지성이 들어간 작업입니다.</p>
+            </div>
+
+            <div>
+                <h5>우리 팀</h5>
+                <ul>
+                    <li>팀명: JDJS</li>
+                    <li>팀 소개</li>
+                    <li>팀원 소개</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>팀원</h5>
+                <ul>
+                    <li>박민성</li>
+                    <li>김재웅</li>
+                    <li>정창규</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>우리 팀 화이팅</h5>
+                <ul>
+                    <li>할 수 있다</li>
+                    <li>화이팅</li>
+                    <li>열심히 해 보자</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>프로젝트</h5>
+                <ul>
+                    <li>프로젝트 소개</li>
+                    <li>주요 기능</li>
+                </ul>
+            </div>
         </div>
 
-        <div>
-            <h5>우리 팀</h5>
-            <ul>
-                <li>팀명: JDJS</li>
-                <li>팀 소개</li>
-                <li>팀원 소개</li>
-            </ul>
-        </div>
-
-        <div>
-            <h5>팀원</h5>
-            <ul>
-                <li>박민성</li>
-                <li>김재웅</li>
-                <li>정창규</li>
-            </ul>
-        </div>
-
-        <div>
-            <h5>우리팀 화이팅</h5>
-            <ul>
-                <li>할 수 있다</li>
-                <li>화이팅</li>
-                <li>열심히 해보자</li>
-            </ul>
-        </div>
-
-        <div>
-            <h5>프로젝트</h5>
-            <ul>
-                <li>프로젝트 소개</li>
-                <li>주요 기능</li>
-            </ul>
-        </div>
-    </div>
-
-    <p id="copyright">
-        © 2025 AI Portal Team
-    </p>
-</footer>
-
+        <p id="copyright">
+            © 2025 AI Portal Team
+        </p>
+    </footer>
 </body>
 </html>

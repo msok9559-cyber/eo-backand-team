@@ -4,9 +4,6 @@
 }
 
 #header-inner {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
     padding: 16px 20px;
     display: flex;
     align-items: center;
@@ -19,7 +16,6 @@
     text-decoration: none;
     color: black;
 }
-
 
 #nav > ul {
     display: flex;
@@ -51,44 +47,50 @@
     border-radius: 4px;
     font-size: 14px;
 }
-/* toggle button */
-#header-inner > button {
-    border: none;
+
+#toggle-btn > span{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+}
+
+/* 토글 버튼 바 */
+#toggle-btn {
     padding: 0;
-    background: none;
-    width: 64px;
-    height: 28px;
-    background-color: #e5e7eb;
-    border-radius: 999px;
-    position: relative;
+    border: none;
+	background: none;
     cursor: pointer;
-    margin-left: 8px;
-    margin-right: 8px;
-    transition: background-color 0.3s;
+
+    width: 54px;
+    height: 28px;
+    border-radius: 28px;
+    background-color: #dcdcdc;
+    position: relative;
+    transition: background-color 0.3s ease;
+    
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-/* OFF / ON 텍스트 */
-#header-inner > button > span:first-child {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 11px;
-    font-weight: bold;
-    color: #374151;
-    pointer-events: none;
-    z-index: 3; 
-}
-
-/* 동그라미 */
-#header-inner > button > span:last-child {
-    width: 20px;
-    height: 20px;
-    background-color: white;
+/* 동그라미 (가상 요소) */
+#toggle-btn::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    top: 4px;
-    left: 4px;
-    z-index: 1;
+    top: 3px;
+    left: 3px;
     transition: transform 0.3s ease;
+}
+
+#toggle-btn.on {
+    background-color: #3a3a3a;
+}
+
+#toggle-btn.on::before {
+    transform: translateX(26px);
 }

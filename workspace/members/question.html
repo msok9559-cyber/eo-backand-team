@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-site</title>
+    <title>JDJS</title>
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/question.css">
     <script src="../JavaScript/question.js"></script>
@@ -19,9 +19,9 @@
         
         <aside id="sidebar">
             <nav aria-label="사이드">
-                <h2><a href="#home">JDJS</a></h2>
+                <h2><a href="../index.html">JDJS</a></h2>
 
-                <!-- 메뉴 버튼을 누르면 사이드바가 튀어나옴 -->
+                <!-- 메뉴 버튼을 누르면 사이드 바가 튀어나옴 -->
                 <ul>
                     <li><a href="#newChat" id="newChat">새 채팅</a></li>
                     <li><a href="#library">라이브러리</a></li>
@@ -34,8 +34,8 @@
 
             <button type="button" id="close"><span>close</span></button>
 
-            <a href="#회원정보"><span>회원정보 수정</span></a>
-            <a href="#logout"><span>로그아웃</span></a>
+            <a href="./mypage.html"><span>회원 정보 수정</span></a>
+            <a href="./login.html" id="logout"><span>로그아웃</span></a>
         </aside>
 
         <main id="contents">
@@ -44,20 +44,20 @@
                 <!-- 무엇을 도와드릴까요?-->
                 <h2>무엇을 도와드릴까요?</h2>
 
-                <!-- 채팅영역 -->
+                <!-- 채팅 영역 -->
                 <div id="chat"><span>프롬프트 창</span></div>
             </section>
                 
             <!-- 입력 -->
             <div>
                 <form id="prompt" action="/server/program" method="post">
-                    <!-- 첨부파일 버튼 -->
+                    <!-- 첨부 파일 버튼 -->
                     <div id="image">
                         <input type="file" id="upload" name="upload">
                         <span>업로드 이미지</span>
                     </div>    
                     
-                    <!-- 입력창 -->
+                    <!-- 입력 창 -->
                     <textarea id="question"
                             name="question"
                             autocomplete="off"
@@ -68,7 +68,6 @@
                 </form>
             </div>
         </main>
-        
     </div> <!-- /#site-->
 </body>
 </html>

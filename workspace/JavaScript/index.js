@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
     const loginUser = localStorage.getItem("loginUser");
 
     if (loginUser) {
-        loginBtn.textContent = "Log Out";
+        loginBtn.textContent = "Log out";
         loginBtn.href = "#";
         mypageBtn.style.display = "inline-block";
 
