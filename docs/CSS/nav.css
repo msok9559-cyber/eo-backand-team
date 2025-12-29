@@ -1,0 +1,96 @@
+/* Header */
+#header {
+    border-bottom: 1px solid #ddd;
+}
+
+#header-inner {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+}
+
+#nav > ul {
+    display: flex;
+    gap: 16px;
+}
+
+#nav > ul > li > a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+#login-btn {
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#mypage-btn {
+    display: none;
+    margin-right: 8px;
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#toggle-btn > span{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+}
+
+/* 토글 버튼 바 */
+#toggle-btn {
+    padding: 0;
+    border: none;
+	background: none;
+    cursor: pointer;
+
+    width: 54px;
+    height: 28px;
+    border-radius: 28px;
+    background-color: #dcdcdc;
+    position: relative;
+    transition: background-color 0.3s ease;
+    
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* 동그라미 (가상 요소) */
+#toggle-btn::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+}
+
+#toggle-btn.on {
+    background-color: #3a3a3a;
+}
+
+#toggle-btn.on::before {
+    transform: translateX(26px);
+}

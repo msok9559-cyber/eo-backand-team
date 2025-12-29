@@ -1,0 +1,309 @@
+#site {
+    min-height: 100vh;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    transition-duration: 200ms;
+}
+
+#site.shift {
+    margin-left: 250px;
+}
+
+#site > header > button {
+    /* 초기화 */
+    padding: 0;
+    border: none;
+    background: none;
+
+    position: fixed;
+    top: 15px;
+    left: 15px;
+
+    width: 40px;
+    height: 40px;
+    
+    background: url("https://i.imgur.com/WkigMaa.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+#site > header > button:hover {
+    transform: scale(1.2);
+}
+
+/* sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #eee;
+
+    margin-left: -250px;
+    transition-duration: 200ms;
+    z-index: 10;
+}
+
+#sidebar.on {
+    margin-left: 0px;
+}
+
+#sidebar > nav > h2 {
+    text-align: center;
+}
+
+#sidebar > nav > h2 > a{
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+
+#sidebar > nav > ul:first-of-type {
+    margin: 70px 0 0;
+    padding: 0;
+    color: black;
+}
+
+#chatList {
+    margin: 20px 0 0;
+    padding: 0;
+    color: black;
+}
+
+#sidebar > nav > ul > li > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 12px;
+
+    border-left: 3px solid transparent;
+}
+
+#sidebar > nav > ul > li > a:hover {
+    background-color: #e0f2fe;
+    color: #111;
+    border-left-color: #93c5fd;
+}
+
+#sidebar > nav > ul > li > p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    background-image: url("https://i.imgur.com/BRdH9in.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #eee;
+    transition-duration: 200ms;
+}
+
+#close:hover {
+    transform: rotate(90deg);
+}
+
+/* sidebar 하단부 */
+#sidebar > a:nth-of-type(1) {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+
+    background-image: url("../images/user-profile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sidebar > a:nth-of-type(2) {
+    display: block;
+    width: 30px;
+    height: 30px;
+    
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    background-image: url("../images/logout.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* contents */
+#contents {
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#contents.on {
+    justify-content: flex-start;
+}
+
+#chat {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    text-align: left;
+    
+    display: none;
+}
+
+.msg {
+    max-width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+    
+    white-space: pre-wrap; 
+    overflow-wrap: break-word; 
+    width: fit-content; 
+}
+
+.user { 
+    margin-left: auto; 
+    background-color: #dbeafe;
+}
+
+.bot { 
+    margin-right: auto;
+    background-color: #f3f4f6;
+}
+
+#contents > section > h2 {
+    font-size: 40px;
+    margin: 0 auto 20px;
+    font-weight: bolder;
+}
+
+/* prompt */
+#prompt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    max-width: 900px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px;
+    
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition-duration: 200ms;
+    overflow-y: auto; 
+}
+
+#prompt.fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+#question {
+    min-width: 100px;
+    flex: 1;
+    height: 1.4em;
+    line-height: 1.4; 
+    padding: 0px 10px;
+
+    border: 0;
+    border-radius: 5px;
+    font-size: 23px;
+
+    background-color: transparent;
+    box-sizing: border-box;
+
+    /* 스크롤바 숨기기, 입력창 크기 조절 막 */
+    resize: none;
+    overflow-y: hidden;
+}
+
+#question.font {
+    font-size: 15px;
+}
+
+#image {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../images/upload.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+#upload {
+    display: none;
+}
+
+#submit {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    padding: 0;
+    border: none;
+    background: none;
+
+    background-image: url("../images/arrow-top-drop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+#submit:hover,
+#image:hover,
+#sidebar > a:nth-of-type(1):hover,
+#sidebar > a:nth-of-type(2):hover {
+    filter: invert(0.8);
+}
+
+#site > header > button > span,
+#close > span,
+#contents > section > div > span,
+#submit > span,
+#prompt > div > span,
+#sidebar > a > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
