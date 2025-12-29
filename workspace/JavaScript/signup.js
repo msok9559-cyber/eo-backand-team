@@ -3,11 +3,12 @@ window.addEventListener("load", function(){
     const idCheckBtn = document.getElementById("idCheckBtn");
     const idMessage = document.getElementById("idMessage");
 
-    const usedIds = ["park", "kim", "jung"];
-
     const pw = document.getElementById("password");
     const pwCheck = document.getElementById("passwordCheck");
     const pwMessage = document.getElementById("pwMessage");
+
+    const nameInput = document.getElementById("userName");
+    const phoneInput = document.getElementById("phone");
 
     const allClick = document.getElementById("allclick");
     const termItems = document.querySelectorAll(".term-item");
@@ -28,6 +29,10 @@ window.addEventListener("load", function(){
     const phoneRegex = /^[0-9]{11}$/;
     const CODE = "485275";
 
+    // 기존 회원 정보 불러오기
+    const users = JSON.parse(this.localStorage.getItem("users")) || [];
+    const usedIds = users.map(user => user.id)
+
     /* 아이디 중복 */
     idCheckBtn.addEventListener("click", function () {
         if (!userId.value) {
@@ -42,12 +47,12 @@ window.addEventListener("load", function(){
         if (usedIds.includes(userId.value)) {
             idMessage.textContent = "이미 사용 중인 아이디입니다.";
             idMessage.style.color = "red";
+            isIdChecked = false;
         } else {
             idMessage.textContent = "사용 가능한 아이디입니다.";
             idMessage.style.color = "green";
+            isIdChecked = true;
         }
-
-        isIdChecked = true;
         hasError();
     });
 
@@ -131,19 +136,25 @@ window.addEventListener("load", function(){
         });
     });
 
-
     // 회원가입
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
         // Error 뜨면 막기
-        if (submitError()) {
-            return;
-        }
+        if (submitError()) return;
+        
+        const newUser = {
+            id: userId.value,
+            password: pw.value,
+            name: nameInput.value,
+            phone: phoneInput.value
+        };
+        
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
 
-        event.preventDefault();
         alert("회원 가입이 완료되었습니다");
-        window.location.href = "login.html";
+        window.location.href = "./login.html";
     });
 
     //오류메세지 있을 경우 서브밋 버튼 막기
