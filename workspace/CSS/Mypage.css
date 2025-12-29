@@ -9,7 +9,7 @@
 }
 
 /* 섹션 제목 */
-#user-info > h2 {
+#main-id > div > h2 {
 	font-size: 28px;
 	font-weight: 700;
 	margin-bottom: 30px;
