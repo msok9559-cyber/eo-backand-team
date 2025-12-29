@@ -14,7 +14,7 @@
 **AI 기반 포털 사이트 화면 설계**를 목표로 합니다.
 
 ### 📌 구현 페이지
-- 메인 페이지 🔍  (file:///C:/workspace/eo-backand-team/workspace/index.html)
+- 메인 페이지 🔍  
 - 질문 결과 페이지 💬  
 - 회원 로그인 페이지 🔐  
 - 회원 가입 페이지 📝  
