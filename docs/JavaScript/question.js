@@ -60,9 +60,35 @@ window.addEventListener('load', function () {
         event.preventDefault();
         const text = question.value;
         if (text === "") return;
-        
+
         addMsg(text, 'user');
-        addMsg('고정된 답변입니다', 'bot');
+
+        // 소문자로 바꿔서 비교
+        const lower = text.toLowerCase();
+
+        //질문 내용
+        if (lower.includes('jdjs')) {
+            addMsg(
+                    `JDJS는 이스트소프트 백엔드 프로젝트 2팀의 팀명이에요.\n정식 이름은 ‘집단지성’이고, 줄여서 JDJS라고 부릅니다.\n\n팀 구성은\n팀장: 박민성\n팀원: 김재웅, 정창규\n\n이렇게예요!`,
+                    'bot'
+                );
+            } else if (lower.includes('ai')) {
+                addMsg(
+                    `AI(인공지능)은 사람이 배우고 생각하는 과정을 컴퓨터가 스스로 흉내 낼 수 있도록 만든 기술이에요.\n대표적으로 챗봇, 이미지 생성, 음성 인식 같은 데에서 사용돼요.`,
+                    'bot'
+                );
+            } else if (lower.includes('점심')) {
+                addMsg(
+                    `점심 고민 중이구나! 오늘은 이런 메뉴 어때?\n- 김치찌개\n- 비빔밥\n- 제육볶음\n- 라면 + 김밥\n맛있게 먹고 힘내`,
+                    'bot'
+                );
+            } else {
+                addMsg(
+                    '질문을 잘 이해하지 못했어. 다른 방식으로 한번 더 물어봐 줄래?',
+                    'bot'
+                );
+            }
+
         question.value = '';
         
         // 전송후 다시 1줄 상태로 변
