@@ -54,7 +54,7 @@ window.addEventListener('load', function () {
         //아이디와 이메일 형식이 맞지 않을경우
         if (!emailRegex.test(userIdInput.value)) {
             window.alert("아이디가 올바르지 않습니다.");
-            userIdInputInput.focus();
+            userIdInput.focus();
             return;
         }
 
@@ -68,6 +68,8 @@ window.addEventListener('load', function () {
         const emailId = emailInput.value;
         const emailDomain = emailSelect.value;
         const fullEmail = emailId + '@' + emailDomain;
+
+        currentUserIndex = -1;
 
         for (let i = 0; i < users.length; i++) {
             if (users[i].id === idValue && users[i].email === fullEmail) {

@@ -1,14 +1,14 @@
 /*다크모드 ON*/
 
-#header-inner > button.active {
+#header-inner > button.on {
     background-color: #374151;
 }
 
-#header-inner > button.active > span:last-child {
+#header-inner > button.on > span:last-child {
     transform: translateX(36px);
 }
 
-#header-inner > button.active > span:first-child {
+#header-inner > button.on > span:first-child {
     color: #ffffff;
 }
 
@@ -210,6 +210,9 @@
 }
 
 /* ===== Dark Mode (Light Dark) ===== */
+body.dark {
+    background-color: #1f1f1f;
+}
 
 body.dark > #header {
     background-color: #1f1f1f;
