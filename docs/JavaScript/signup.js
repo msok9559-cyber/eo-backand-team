@@ -28,13 +28,14 @@ window.addEventListener("load", function(){
     let isCertified = false;
     let isIdChecked = false;
 
-    // 휴대폰 번호 정규식
+    // 정규 표현식
     const phoneRegex = /^[0-9]{11}$/;
+    const emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*$/;
     const CODE = "485275";
 
     // 기존 회원 정보 불러오기
     const users = JSON.parse(this.localStorage.getItem("users")) || [];
-    const usedIds = users.map(user => user.id)
+    const usedIds = users.map(user => user.id);
 
     /* 아이디 중복 */
     idCheckBtn.addEventListener("click", function () {
@@ -142,9 +143,17 @@ window.addEventListener("load", function(){
     // 회원가입
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-
+        
         // Error 뜨면 막기
         if (submitError()) return;
+        
+        const emailId = emailInput.value;
+
+        if (!emailRegex.test(emailId)) {
+                window.alert("이메일 형식이 올바르지 않습니다.");
+                emailInput.focus();
+                return;
+            }
 
         const email = emailInput.value + "@" + emailSelect.value;
         
@@ -154,7 +163,6 @@ window.addEventListener("load", function(){
             name: nameInput.value,
             phone: phoneInput.value,
             email: email
-
         };
         
         users.push(newUser);

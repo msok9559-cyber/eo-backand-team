@@ -13,6 +13,9 @@ window.addEventListener('load', function () {
     const recheckPassword = document.querySelector('#recheckPassword > input');
     const pwMsg = document.getElementById('pwMsg');
 
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const emailSelect = document.querySelector('#emailId > select');
+    let currentUserIndex = -1;
     // 고정 인증번호
     const CODE = '985632';
 
@@ -51,13 +54,32 @@ window.addEventListener('load', function () {
         //아이디와 이메일 형식이 맞지 않을경우
         if (!emailRegex.test(userIdInput.value)) {
             window.alert("아이디가 올바르지 않습니다.");
-            emailInput.focus();
+            userIdInput.focus();
             return;
         }
 
         if (!emailRegex.test(emailInput.value)) {
             window.alert("이메일 형식이 올바르지 않습니다.");
             emailInput.focus();
+            return;
+        }
+
+        const idValue = userIdInput.value;
+        const emailId = emailInput.value;
+        const emailDomain = emailSelect.value;
+        const fullEmail = emailId + '@' + emailDomain;
+
+        currentUserIndex = -1;
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].id === idValue && users[i].email === fullEmail) {
+                currentUserIndex = i;
+                break;
+            }
+        }
+
+        if (currentUserIndex === -1) {
+            window.alert('입력하신 아이디와 이메일로 가입된 회원이 없습니다.');
             return;
         }
 
@@ -124,6 +146,9 @@ window.addEventListener('load', function () {
 
     // 재설정 버튼
     pwButton.addEventListener('click', function () {
+        users[currentUserIndex].password = newPassword.value;
+        localStorage.setItem('users', JSON.stringify(users));
+
         window.alert('비밀번호가 재설정 되었습니다');
         location.href = "../members/login.html";
     });

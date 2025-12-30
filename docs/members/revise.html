@@ -39,20 +39,35 @@
 		<form method="post" action="/server/program">           
 			<div class="info-row">
 				<label>이름</label>
-				<span class="name-value">홍xx</span>
+				<span class="name-value" id="name">홍xx</span>
 				<input type="text" name="userName" placeholder="새 이름" autocomplete="off">            
 			</div>
 
 			<div class="info-row">
 				<label>E-mail</label>
-				<span class="name-value">jhxxxxx@xxxxx.com</span>
-				<input type="email" name="email" placeholder="새 E-mail" autocomplete="off">         
+				<span class="name-value" id="email">jhxxxxx@xxxxx.com</span>
+				
+				<div id="emailId">
+                    <input type="text" name="emailId" placeholder="이메일 입력" autocomplete="off">
+                    
+                    <span>@</span>
+                    <select name="email">
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="kakao.com">kakao.com</option>
+                        <option value="outlook.com">outlook.com</option>
+                        <option value="icloud.com">icloud.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                    </select>
+                </div>
 			</div>
 
 			<div class="info-row">
 				<label>휴대 전화</label>
-				<span class="name-value">010-xxxx-xxxx</span> 
-				<input type="tel" name="phone" placeholder="새 휴대 전화" autocomplete="off">       
+				<span class="name-value" id="phoneNumber">010-xxxx-xxxx</span> 
+				<input type="tel" name="phone" placeholder="새 휴대 전화" maxlength="11" autocomplete="off">       
 			</div>
 
 			<button type="submit" id="correction">수정 완료</button>
