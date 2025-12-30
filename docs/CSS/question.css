@@ -130,7 +130,7 @@
     left: 15px;
     bottom: 15px;
 
-    background-image: url("../images/user-profile.png");
+    background-image: url("../Images/user-profile.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -144,7 +144,7 @@
     right: 15px;
     bottom: 15px;
 
-    background-image: url("../images/logout.png");
+    background-image: url("../Images/logout.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
