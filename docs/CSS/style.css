@@ -104,7 +104,7 @@
     margin-bottom: 8px;
 }
 
-#tool-list > article > h4 > a {
+#searchLink {
     text-decoration: none;
     color: inherit;
 }
