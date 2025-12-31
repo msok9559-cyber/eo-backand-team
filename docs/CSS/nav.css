@@ -1,9 +1,11 @@
 /* Header */
 #header {
+    width: 100%;
     border-bottom: 1px solid #ddd;
 }
 
-#header-inner {
+#header > div{
+    margin: 0 auto;
     padding: 16px 20px;
     display: flex;
     align-items: center;
@@ -93,4 +95,18 @@
 
 #toggle-btn.on::before {
     transform: translateX(26px);
+}
+
+/*다크 모드 */
+body.dark #header {
+    background-color: #1f1f1f;
+}
+
+body.dark #header > div > a {
+    color: #fff;
+}
+
+body.dark #nav > ul > li,
+body.dark #nav > ul > li > a {
+    color: #fff;
 }

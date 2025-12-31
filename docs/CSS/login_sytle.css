@@ -66,25 +66,23 @@
     font-size: 14px;
 }
 
-#banner-section {
-	margin-top: 5px;
+#footer-banner {
+	font-size: 14px;
+	color: #555;
 	text-align: center;
 }
 
-#banner-section > img {
+#footer-banner > div {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#footer-banner > div > img {
 	width: 300px;
 	height: 28vh;
 	border-radius: 20px;
 }
 
-#footer-banner {
-	margin-top : 5px;
-	padding: 20px 0;
-	font-size: 14px;
-	color: #555;
-	text-align: center;
-
-}
 
 
 

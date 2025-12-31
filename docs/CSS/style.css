@@ -1,19 +1,4 @@
-/*다크모드 ON*/
-
-#header-inner > button.on {
-    background-color: #374151;
-}
-
-#header-inner > button.on > span:last-child {
-    transform: translateX(36px);
-}
-
-#header-inner > button.on > span:first-child {
-    color: #ffffff;
-}
-
 /* Hero Section */
-
 #hero {
     padding: 100px 20px;
     text-align: center;
@@ -41,15 +26,16 @@
 }
 
 /* Tools Section */
-
 #tools {
     background-color: #f3f4f6;
-    padding: 80px 20px;
 }
 
 #tools-inner {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
 }
 
 #tools-inner > h3 {
@@ -132,7 +118,8 @@
 }
 
 #feature-list {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 
     display: grid;
@@ -140,7 +127,7 @@
     gap: 32px;
 }
 
-#why > #feature-list > article {
+#feature-list > article {
     border: 1px solid #d1d5db;
     border-radius: 12px;
     padding: 32px 24px;
@@ -174,20 +161,20 @@
 }
 
 /* Footer*/
-
 #footer {
     background-color: #000;
     color: white;
-    padding: 60px 20px 20px;
 }
 
 #footer-inner {
-    width: 1200px;
+    padding: 60px 20px 20px;
+    max-width: 1200px;
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
+    box-sizing: border-box;
 }
 
 #footer-inner > div > h4,
@@ -202,13 +189,30 @@
     margin-bottom: 12px;
 }
 
-#copyright {
-    margin-top: 40px;
+#footer > p {
     text-align: center;
     font-size: 13px;
     color: #9ca3af;
+    line-height: 1.6;
 }
 
+
+@media (max-width: 768px) {
+    #tool-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #feature-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #tool-list {
+        grid-template-columns: 1fr;
+    }
+}
 /* ===== Dark Mode (Light Dark) ===== */
 body.dark {
     background-color: #1f1f1f;

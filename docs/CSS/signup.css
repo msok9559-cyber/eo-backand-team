@@ -129,15 +129,20 @@
 
 /* footer */
 #auth-footer {
-    text-align: center;
-    padding: 24px;
+    padding: 20px;
     font-size: 14px;
     color: gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 #auth-footer > a {
     color: #2563eb;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Dark Mode */
