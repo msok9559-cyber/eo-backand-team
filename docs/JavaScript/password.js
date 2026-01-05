@@ -5,10 +5,10 @@ window.addEventListener('load', function () {
 
     const sendButton = document.querySelector('#form > button');
     const certButton = document.querySelector('#certification > button');
-    const pwButton = document.querySelector('#password > button');
+    const pwButton = document.querySelector('#passwords > button');
 
-    const password = document.getElementById('password');
-    const newPwInput = document.querySelector('#password > div > input');
+    const password = document.getElementById('passwords');
+    const newPwInput = document.querySelector('#passwords > div > input');
     const newPassword = document.querySelector('#newPassword > input');
     const recheckPassword = document.querySelector('#recheckPassword > input');
     const pwMsg = document.getElementById('pwMsg');
