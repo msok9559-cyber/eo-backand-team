@@ -37,6 +37,12 @@ window.addEventListener('load', function () {
 
     const currentUser = users[currentUserIndex];
 
+    if (currentUserIndex === -1) {
+        alert('로그인 정보가 없습니다. 다시 로그인 해주세요.');
+        location.href = './login.html';
+        return;
+    }
+
     //이름
     if (currentUser.name) {
         nameSpan.textContent = currentUser.name;
