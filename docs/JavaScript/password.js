@@ -1,10 +1,10 @@
 window.addEventListener('load', function () {
-    const userIdInput = document.querySelector('#userId > input');
-    const emailInput = document.querySelector('#emailId > input');
-    const certInput = document.querySelector('#certification > input');
+    const userIdInput = document.querySelector('#userIds > input');
+    const emailInput = document.querySelector('#emailIds > input');
+    const certInput = document.querySelector('#certifications > input');
 
     const sendButton = document.querySelector('#form > button');
-    const certButton = document.querySelector('#certification > button');
+    const certButton = document.querySelector('#certifications > button');
     const pwButton = document.querySelector('#passwords > button');
 
     const password = document.getElementById('passwords');
@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
     const pwMsg = document.getElementById('pwMsg');
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    const emailSelect = document.querySelector('#emailId > select');
+    const emailSelect = document.querySelector('#emailIds > select');
     let currentUserIndex = -1;
     // 고정 인증번호
     const CODE = '985632';
