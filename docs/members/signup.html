@@ -39,7 +39,7 @@
                 <!-- 이름 -->
                 <div class="form-row">
                     <label for="userName">이름</label>
-                    <input type="text" name="userName" class="form-input" placeholder="이름 입력" id="userName" autocomplete="off" required>
+                    <input type="text" name="userName" class="form-input" placeholder="이름 입력" id="userName" autocomplete="name" required>
                 </div>
 
                 <!-- 가입 유형 -->
@@ -75,10 +75,10 @@
                 <div class="form-row">
                     <label for="email" class="label">이메일</label>
                     <div id="emailId">
-                        <input type="text" id="email" name="emailId" placeholder="이메일 입력" autocomplete="off">
+                        <input type="text" id="email" name="emailId" placeholder="이메일 입력" autocomplete="email">
                         
                         <span>@</span>
-                        <select name="email">
+                        <select name="email" autocomplete="email">
                             <option value="naver.com">naver.com</option>
                             <option value="gmail.com">gmail.com</option>
                             <option value="daum.net">daum.net</option>
@@ -109,7 +109,7 @@
                 <div class="form-row">
                     <label for="phone">휴대폰 번호</label>
                     <div class="inline-input" id="certification">
-                        <input type="tel" name="phone" class="form-input" id="phone" maxlength="11" autocomplete="off" required>
+                        <input type="tel" name="phone" class="form-input" id="phone" maxlength="11" autocomplete="tel" required>
                         <button type="button" class="btn-auth">인증 번호</button>
                     </div>
                 </div>
